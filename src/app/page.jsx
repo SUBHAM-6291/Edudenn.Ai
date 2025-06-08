@@ -8,6 +8,9 @@ import FAQ from './_components/FAQ'
 import Video from './_components/Video'
 import Upcomingevents from './_components/Upcomingevents'
 import AllCourse from './_components/Allcourse'
+import OurCollaboartion from './_components/OurCollaboartion'
+import Clan from './_components/Clan'
+
 
 const page = () => {
   return (
@@ -17,7 +20,10 @@ const page = () => {
       <Aboutus_Text/>
       <AllCourse/>
       <Video/>
+      <OurCollaboartion/>
+           <Clan/>
       <Upcomingevents/>
+ 
       <Needhelp/>
        <FAQ/>
       <Footer/>
