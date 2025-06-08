@@ -2,7 +2,7 @@ export const courses = [
   {
     id: 'ui-ux-design',
     title: 'UI/UX Design for Web and Mobile for Kids',
-    image: '/Courses/1.jpg',
+    image: '/courses/1.jpg',
     price: 99,
     footerStats: { enrolled: '25', duration: '36hr', reviews: '2.5k' },
     description: 'Learn the basics of UI/UX design for web and mobile applications, tailored for young learners.',
@@ -10,7 +10,7 @@ export const courses = [
   {
     id: 'javascript-mastery',
     title: 'JavaScript Mastery',
-    image: '/Courses/2.jpg',
+    image: '/courses/2.jpg',
     price: 149,
     footerStats: { enrolled: '25', duration: '36hr', reviews: '2.5k' },
     description: 'Master JavaScript concepts like closures, promises, and async/await for advanced web development.',
@@ -18,7 +18,7 @@ export const courses = [
   {
     id: 'python-programming',
     title: 'Introduction to Python Programming',
-    image: '/Courses/3.jpg',
+    image: '/courses/3.jpg',
     price: 129,
     footerStats: { enrolled: '25', duration: '36hr', reviews: '2.5k' },
     description: 'Introduction to Python programming for beginners, covering syntax and basic applications.',
@@ -26,7 +26,7 @@ export const courses = [
   {
     id: 'data-science-ml',
     title: 'Data Science and Machine Learning',
-    image: '/Courses/4.jpg',
+    image: '/courses/4.jpg',
     price: 199,
     footerStats: { enrolled: '25', duration: '36hr', reviews: '2.5k' },
     description: 'Learn data science and machine learning fundamentals, including data analysis and modeling.',
@@ -34,7 +34,7 @@ export const courses = [
   {
     id: 'ethical-hacking',
     title: 'Ethical Hacking and Penetration Testing',
-    image: '/Courses/5.jpg',
+    image: '/courses/5.jpg',
     price: 179,
     footerStats: { enrolled: '25', duration: '36hr', reviews: '2.5k' },
     description: 'Introduction to ethical hacking and penetration testing to secure systems.',
@@ -42,7 +42,7 @@ export const courses = [
   {
     id: 'network-administration',
     title: 'Network Administration (CCNA)',
-    image: '/Courses/6.jpg',
+    image: '/courses/6.jpg',
     price: 159,
     footerStats: { enrolled: '25', duration: '36hr', reviews: '2.5k' },
     description: 'Learn network administration with CCNA certification preparation.',
@@ -50,7 +50,7 @@ export const courses = [
   {
     id: 'web-development',
     title: 'Popular Course in Web Development',
-    image: '/Courses/1.jpg',
+    image: '/courses/1.jpg',
     price: 139,
     footerStats: { enrolled: '25', duration: '36hr', reviews: '2.5k' },
     description: 'Create modern web applications with HTML, CSS, and JavaScript.',
@@ -58,7 +58,7 @@ export const courses = [
   {
     id: 'devops-ci',
     title: 'DevOps and Continuous Integration',
-    image: '/Courses/8.jpg',
+    image: '/courses/8.jpg',
     price: 169,
     footerStats: { enrolled: '25', duration: '36hr', reviews: '2.5k' },
     description: 'Master DevOps practices and CI/CD pipelines for efficient software delivery.',
