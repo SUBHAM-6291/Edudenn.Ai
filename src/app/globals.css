@@ -1,0 +1,33 @@
+@import "tailwindcss";
+
+
+@font-face {
+  font-family: 'Gucina';
+  src: url('/fonts/Gucina-SemiBold.otf') format('opentype');
+  font-weight: 70; 
+  font-style: normal;
+  font-display: swap;
+}
+
+.font-gucina {
+  font-family: 'Gucina', sans-serif; 
+}
+
+
+
+
+
+.josefin-sans-title {
+  font-family: "Josefin Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+
+
+.lexend-body {
+  font-family: "Lexend", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400; 
+  font-style: normal;
+}
