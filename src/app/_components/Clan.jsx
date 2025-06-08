@@ -7,7 +7,7 @@ const Clan = ({ toggleMenu }) => {
         relative
         w-full
         min-h-[50vh] sm:min-h-[60vh] md:min-h-[70vh] lg:min-h-[80vh]
-        bg-[url('/Clan.jpg')]
+        bg-[url('/clan.jpg')]
         bg-cover
         bg-center
         flex
