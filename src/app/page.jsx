@@ -10,6 +10,8 @@ import Upcomingevents from './_components/Upcomingevents'
 import AllCourse from './_components/Allcourse'
 import OurCollaboartion from './_components/OurCollaboartion'
 import Clan from './_components/Clan'
+import Course_categorys from './_components/Course_categorys'
+import Testimonal from './_components/Testimonal'
 
 
 const page = () => {
@@ -18,12 +20,13 @@ const page = () => {
       <Navbar/>
       <Aboutus/>
       <Aboutus_Text/>
+      <Course_categorys/>
       <AllCourse/>
       <Video/>
       <OurCollaboartion/>
            <Clan/>
       <Upcomingevents/>
- 
+ <Testimonal/>
       <Needhelp/>
        <FAQ/>
       <Footer/>
