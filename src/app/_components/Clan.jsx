@@ -3,11 +3,20 @@ import React from 'react';
 const Clan = ({ toggleMenu }) => {
   return (
     <div
-      className="relative w-full min-h-[80vh] bg-cover bg-center flex items-center justify-center"
-      style={{ backgroundImage: "url('/Clan.jpg')" }}
+      className="
+        relative
+        w-full
+        min-h-[50vh] sm:min-h-[60vh] md:min-h-[70vh] lg:min-h-[80vh]
+        bg-[url('/Clan.jpg')]
+        bg-cover
+        bg-center
+        flex
+        items-center
+        justify-center
+      "
     >
-      {/* Overlay */}
-      <div className="absolute inset-0 bg-black/30 z-0" />
+      {/* Black overlay covering the entire section */}
+      <div className="absolute inset-0 bg-black/30" />
 
       {/* Content */}
       <div className="relative z-10 flex flex-col items-center text-center px-4 py-20">
