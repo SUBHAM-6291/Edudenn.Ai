@@ -61,9 +61,9 @@ const Upcomingevents = () => {
   ];
 
   return (
-    <div className="bg-black min-h-screen p-8">
+    <div className="py-12 sm:py-16 md:py-20 lg:py-24 bg-black min-h-[50vh] p-4 sm:p-6 md:p-8 lg:p-10 xl:p-12 2xl:p-16">
       <div className="mb-8 text-center">
-        <h1 className="text-white text-6xl font-bold inline-block font-gucina">
+        <h1 className="text-white text-4xl sm:text-5xl md:text-6xl font-bold inline-block font-gucina">
           <span className="mr-2">Upcoming </span>
           <span className="relative group inline-block">
             Events
@@ -71,18 +71,19 @@ const Upcomingevents = () => {
           </span>
         </h1>
 
-        <div className="mt-8 max-w-3xl mx-auto text-center">
-          <p className="text-gray-300 text-base leading-relaxed lexend-body">
+        <div className="mt-6 sm:mt-8 max-w-3xl mx-auto text-center">
+          <p className="text-gray-300 text-sm sm:text-base md:text-lg leading-relaxed lexend-body">
             Well, because we’re not your grandma’s boring old school! At Edu-Den, we’re the rebels of education, the mavericks of learning, and the champions of fun-filled knowledge. We’ll teach you how to slay dragons and code websites, all while cracking jokes and sipping on virtual coffee.
           </p>
         </div>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full place-items-center">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-4 sm:gap-6 md:gap-8 w-full place-items-center">
         {events.map((event, index) => (
           <div
             key={index}
-            className="relative rounded-2xl w-full max-w-sm h-[32rem] overflow-hidden cursor-pointer transition-transform duration-300 hover:scale-105 hover:shadow-lg"
+            className="relative rounded-2xl w-full max-w-sm min-h-[28rem] max-h-[36rem] overflow-hidden cursor-pointer transition-transform duration-300 hover:scale-105 focus:scale-105 hover:shadow-lg focus:shadow-lg"
+            tabIndex={0}
           >
             <div
               className="absolute inset-0 bg-cover bg-center"
@@ -93,21 +94,21 @@ const Upcomingevents = () => {
 
             <div className="absolute inset-0 bg-black/60" />
 
-            <div className="relative z-10 flex flex-col items-center justify-start pt-60 h-[calc(100%-64px)] p-6 text-white text-center">
-              <h3 className="text-2xl font-bold mb-4 lexend-body">{event.title}</h3>
-              <p className="text-base max-w-[90%] leading-relaxed lexend-body">{event.description}</p>
+            <div className="relative z-10 flex flex-col items-center justify-start pt-48 sm:pt-56 h-full p-4 sm:p-6 text-white text-start">
+              <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 lexend-body">{event.title}</h3>
+              <p className="text-sm sm:text-base max-w-[90%] leading-relaxed lexend-body">{event.description}</p>
             </div>
 
-            <div className="absolute bottom-0 left-0 right-0 p-4 text-white text-base lexend-body">
+            <div className="absolute bottom-0 left-0 right-0 p-3 sm:p-4 text-white text-sm sm:text-base lexend-body">
               <div className="absolute inset-0 bg-gradient-to-t from-black/90 to-transparent pointer-events-none"></div>
 
-              <div className="relative flex items-center justify-center gap-4">
+              <div className="relative flex items-center justify-center gap-3 sm:gap-4">
                 <div className="flex items-center gap-2">
-                  <img src="/clock.png" alt="Clock" className="w-5 h-5" />
+                  <img src="/clock.png" alt="Clock" className="w-4 h-4 sm:w-5 sm:h-5" />
                   <p className="font-medium lexend-body">{event.time}</p>
                 </div>
                 <div className="flex items-center gap-2 text-gray-300">
-                  <img src="/calendar.png" alt="Calendar" className="w-5 h-5" />
+                  <img src="/calendar.png" alt="Calendar" className="w-4 h-4 sm:w-5 sm:h-5" />
                   <p className="lexend-body">{event.year}</p>
                 </div>
               </div>

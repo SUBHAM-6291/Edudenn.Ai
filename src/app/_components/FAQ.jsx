@@ -1,11 +1,10 @@
-
 'use client';
 
 import React, { useState } from 'react';
 import { IoIosArrowDown } from 'react-icons/io';
 
 const FAQ = () => {
-  const [openSection, setOpenSection] = useState(null);
+  const [openSection, setOpenSection] = useState(0); // ✅ First section open
 
   const toggleSection = (index) => {
     setOpenSection(openSection === index ? null : index);
@@ -35,7 +34,7 @@ const FAQ = () => {
   ];
 
   return (
-    <div className="bg-black min-h-screen p-4 sm:p-6 md:p-8 w-full flex flex-col lg:flex-row gap-4 sm:gap-6 items-start justify-between">
+    <div className=" py-12 sm:py-16 md:py-20 lg:py-24 min-h-[300px] 2xl:h-[400px] px-[84px] sm:px-[84px] md:px-[84px] lg:px-[84px] xl:px-[84px] 2xl:px-[84px] bg-black min-h-screen p-4 sm:p-6 md:p-8 w-full flex flex-col lg:flex-row gap-4 sm:gap-6 items-start justify-between px-[84px]">
       <div className="flex-1 w-full flex flex-col">
         <div className="mb-6 sm:mb-8 md:mb-10">
           <h1 className="text-white text-3xl sm:text-6xl md:text-6xl lg:text-[3.75rem] font-bold font-gucina relative group inline-block">

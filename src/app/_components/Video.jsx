@@ -5,7 +5,7 @@ const Video = () => {
   const [playVideo, setPlayVideo] = useState(false);
 
   return (
-    <div className="w-full aspect-video relative overflow-hidden shadow-lg">
+    <div className=" py-12 sm:py-16 md:py-20 lg:py-24 min-h-[300px] 2xl:h-[400px] bg-black w-full aspect-video relative overflow-hidden shadow-lg">
       {!playVideo ? (
         <>
           <img
@@ -27,12 +27,12 @@ const Video = () => {
       ) : (
         <iframe
           className="w-full h-full"
-          src="https://www.youtube.com/embed/r8pDXO6zRUg?autoplay=1"
+          src="https://www.youtube.com/embed/r8pDXO6zRUg?autoplay=1&controls=0&modestbranding=1&rel=0&mute=1"
           title="YouTube video player"
           frameBorder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allow="autoplay; encrypted-media; picture-in-picture"
           allowFullScreen
-        ></iframe>
+        />
       )}
     </div>
   );

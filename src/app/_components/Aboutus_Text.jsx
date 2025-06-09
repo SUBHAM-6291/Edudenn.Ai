@@ -3,8 +3,8 @@ import { FaLongArrowAltRight } from 'react-icons/fa';
 
 const Aboutus_Text = () => {
   return (
-    <div className="bg-black text-white py-8 px-4 sm:py-12 md:py-14 lg:py-16 xl:py-20 2xl:py-24 sm:px-6 md:px-8 lg:px-10 xl:px-12 2xl:px-16">
-      <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-6 sm:gap-8 md:gap-10 lg:gap-12 xl:gap-14 2xl:gap-16">
+    <div className="bg-black text-white py-8 sm:py-12 md:py-14 lg:py-16 xl:py-20 2xl:py-24">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 2xl:px-16 flex flex-col lg:flex-row gap-6 sm:gap-8 md:gap-10 lg:gap-12 xl:gap-14 2xl:gap-16">
         {/* Left Side */}
         <div className="lg:w-1/3 flex flex-col items-start">
           <h2 className="font-gucina text-2xl sm:text-3xl md:text-3.5xl lg:text-6xl xl:text-4.5xl 2xl:text-5xl font-bold mb-6 sm:mb-8 md:mb-10 lg:mb-12 xl:mb-14 2xl:mb-16 relative group">

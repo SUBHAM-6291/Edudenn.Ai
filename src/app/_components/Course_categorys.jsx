@@ -29,7 +29,7 @@ const courses = [
   {
     id: '4',
     title: 'Mobile App Development',
-    description: 'Explore cloud services, deployment models, and key providers .',
+    description: 'Explore cloud services, deployment models, and key providers.',
     image: '/group/Group 23.png',
   },
   {
@@ -67,35 +67,37 @@ const Course_categorys = () => {
   };
 
   return (
-    <div className="bg-black p-4 sm:p-6 md:p-8 lg:p-10">
+    <div className="bg-black">
       {/* Heading Icons Row */}
-      <div className="flex items-center gap-2 mb-6 sm:mb-8 justify-center">
-        <TfiLayoutLineSolid className="text-yellow-400 text-2xl sm:text-3xl scale-150" />
-        <span className="text-yellow-400 font-gucina font-semibold text-base sm:text-lg md:text-xl">
-          Course Categories
-        </span>
-        <TfiLayoutLineSolid className="text-yellow-400 text-2xl sm:text-3xl scale-150" />
-      </div>
-
-      {/* Main Heading */}
-      <div className="mb-6 sm:mb-8 md:mb-10 text-center">
-        <h1 className="text-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold inline-block font-gucina tracking-tight">
-          <span className="mr-2">Course </span>
-          <span className="relative group inline-block">
-            Categories
-            <span className="block bg-yellow-400 h-0.5 w-0 group-hover:w-full transition-all duration-500 mt-1 mx-auto"></span>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12">
+        <div className="flex items-center gap-2 mb-6 sm:mb-8 justify-center">
+          <TfiLayoutLineSolid className="text-yellow-400 text-2xl sm:text-3xl scale-150" />
+          <span className="text-yellow-400 font-gucina font-semibold text-base sm:text-lg md:text-xl">
+            Course Categories
           </span>
-        </h1>
+          <TfiLayoutLineSolid className="text-yellow-400 text-2xl sm:text-3xl scale-150" />
+        </div>
+
+        {/* Main Heading */}
+        <div className="mb-6 sm:mb-8 md:mb-10 text-center">
+          <h1 className="text-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold inline-block font-gucina tracking-tight">
+            <span className="mr-2">Course </span>
+            <span className="relative group inline-block">
+              Categories
+              <span className="block bg-yellow-400 h-0.5 w-0 group-hover:w-full transition-all duration-500 mt-1 mx-auto"></span>
+            </span>
+          </h1>
+        </div>
       </div>
 
       {/* Course Category Cards Grid */}
-      <div className="w-full max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 md:gap-8 place-items-center">
+      <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-0 place-content-stretch">
           {courses.map((course) => (
             <Link
               key={course.id}
               href={`/courses/${course.id}`}
-              className="relative rounded-2xl w-full max-w-[20rem] sm:max-w-[22rem] md:max-w-[25rem] h-[20rem] sm:h-[22rem] md:h-[25rem] overflow-hidden cursor-pointer transition-transform duration-300 hover:scale-105 focus:scale-105 hover:shadow-lg focus:shadow-lg outline-none"
+              className="relative rounded-2xl w-full h-[20rem] sm:h-[22rem] md:h-[25rem] overflow-hidden cursor-pointer transition-transform duration-300 hover:scale-105 focus:scale-105 hover:shadow-lg focus:shadow-lg outline-none"
               style={{ backgroundColor: '#1a1a1a' }}
               tabIndex={0}
               onKeyDown={(e) => handleKeyDown(e, course.id)}

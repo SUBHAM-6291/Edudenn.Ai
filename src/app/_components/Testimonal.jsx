@@ -20,13 +20,14 @@ const Testimonial = () => {
       >
         <div className="absolute inset-0 bg-black/30" />
 
-        <div className="relative z-10 flex flex-col md:flex-row items-center justify-between w-full max-w-6xl px-4 sm:px-6 md:px-8 gap-6 sm:gap-8 md:gap-10">
+        <div className="relative z-10 flex flex-col md:flex-row items-center justify-between w-full max-w-6xl px-4 sm:px-6 md:px-8 gap-8 sm:gap-12 md:gap-16 lg:gap-20">
+          {/* Left Side Container */}
           <div className="flex flex-col items-start w-full md:w-1/2 space-y-4 sm:space-y-6">
-            <div className="relative flex p-4 sm:p-6 rounded-[10px] shadow-lg bg-[#141414] w-full h-auto gap-4">
+            <div className="relative flex p-4 sm:p-6 rounded-[10px] shadow-lg bg-[#141414] w-full h-auto gap-4 items-start">
               <img
                 src="/66.QuoteRight.png"
                 alt="Quote"
-                className="w-5 h-5 sm:w-6 sm:h-6 object-contain mt-1"
+                className="w-5 h-5 sm:w-6 sm:h-6 object-contain flex-shrink-0 translate-x-10"
                 loading="lazy"
               />
 
@@ -43,7 +44,12 @@ const Testimonial = () => {
                   ))}
                 </div>
 
-                <p className="text-white text-xs sm:text-sm font-light lexend-body mt-6 sm:mt-8 leading-relaxed">
+                <p
+                  className="
+                    text-white text-xs sm:text-sm font-light lexend-body mt-6 sm:mt-8 leading-relaxed text-left
+                    relative hover:underline-yellow
+                  "
+                >
                   Ex urna finibus natoque auctor pretium etiam consequat eleifend himenaeos mauris
                   placerat ridiculus odio praesent. Ex urna finibus natoque auctor pretium etiam
                   consequat eleifend himenaeos mauris placerat ridiculus odio praesent.
@@ -53,14 +59,14 @@ const Testimonial = () => {
                   <img
                     src="/last.jpg"
                     alt="Nazmul Islam"
-                    className="w-8 h-8 sm:w-10 sm:h-10 rounded-full object-cover"
+                    className="w-8 h-8 sm:w-10 sm:h-10 rounded-full object-cover flex-shrink-0"
                     loading="lazy"
                   />
                   <div>
-                    <h3 className="text-yellow-400 text-sm sm:text-base font-bold font-gucina">
+                    <h3 className="text-yellow-400 text-sm sm:text-base font-bold font-gucina text-left">
                       Nazmul Islam
                     </h3>
-                    <p className="text-white text-xs sm:text-sm font-light lexend-body">
+                    <p className="text-white text-xs sm:text-sm font-light lexend-body text-left">
                       Graphic Designer
                     </p>
                   </div>
@@ -69,6 +75,7 @@ const Testimonial = () => {
             </div>
           </div>
 
+          {/* Right Side Container */}
           <div className="flex flex-col items-start w-full md:w-1/2 space-y-4 sm:space-y-6">
             <h2 className="text-yellow-400 text-2xl sm:text-3xl md:text-4xl font-extrabold font-gucina">
               Testimonial
@@ -76,7 +83,12 @@ const Testimonial = () => {
             <h3 className="text-white text-xl sm:text-2xl md:text-3xl font-bold font-gucina">
               What Students Say
             </h3>
-            <p className="text-white text-sm sm:text-base md:text-lg font-light lexend-body">
+            <p
+              className="
+                text-white text-sm sm:text-base md:text-lg font-light lexend-body
+                relative hover:underline-yellow  
+              "
+            >
               Ex urna finibus natoque auctor pretium etiam consequat eleifend himenaeos mauris
               placerat ridiculus odio praesent. Ex urna finibus natoque auctor pretium etiam
               consequat eleifend himenaeos mauris placerat ridiculus odio praesent.

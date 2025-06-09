@@ -1,11 +1,11 @@
-'use client';
-import React, { useState, useEffect, useRef } from 'react';
-import Image from 'next/image';
-import { IoIosArrowRoundForward, IoIosArrowRoundBack } from 'react-icons/io';
-import { IoHomeOutline } from 'react-icons/io5';
-import { CgArrowLongDown } from 'react-icons/cg';
-import { GoArrowDownRight } from 'react-icons/go';
-import { gsap } from 'gsap';
+"use client";
+import React, { useState, useEffect, useRef } from "react";
+import Image from "next/image";
+import { IoIosArrowRoundForward, IoIosArrowRoundBack } from "react-icons/io";
+import { IoHomeOutline } from "react-icons/io5";
+import { CgArrowLongDown } from "react-icons/cg";
+import { GoArrowDownRight } from "react-icons/go";
+import { gsap } from "gsap";
 
 const Aboutus = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -20,13 +20,19 @@ const Aboutus = () => {
   const socialRef = useRef(null);
 
   const images = [
-    '/aboutus.jpg',
-    '/creative-people-working-office.jpg',
-    '/3rd_image_students.avif',
-    '/boy_thinking.jpg',
+    "/aboutus.jpg",
+    "/creative-people-working-office.jpg",
+    "/3rd_image_students.avif",
+    "/boy_thinking.jpg",
   ];
 
   useEffect(() => {
+    // Preload all images to avoid loading delays
+    images.forEach((src) => {
+      const img = new window.Image();
+      img.src = src;
+    });
+
     const interval = setInterval(() => {
       handleAutoTransition();
     }, 5000);
@@ -34,34 +40,148 @@ const Aboutus = () => {
   }, [currentIndex]);
 
   const animateImage = (newIndex, direction = 1) => {
-    const slideOutX = direction === 1 ? 100 : -100;
-    const slideInX = direction === 1 ? -100 : 100;
+    const tl = gsap.timeline();
 
-    gsap.to(imageRef.current, {
-      x: slideOutX,
-      opacity: 0,
-      duration: 0.5,
-      ease: 'power2.out',
-    });
+    // Instantly hide all text, buttons, arrows, and social links
+    tl.set(
+      [
+        welcomeRef.current,
+        line1Ref.current,
+        line2Ref.current,
+        line3Ref.current,
+        oneStopRef.current,
+        buttonRef.current,
+        arrowRef.current,
+        socialRef.current,
+      ],
+      {
+        opacity: 0,
+        y: 20, // Reset position for clean re-entry
+        duration: 0,
+      },
+      0
+    );
 
-    setTimeout(() => {
-      setCurrentIndex(newIndex);
+    // Slide out the current image
+    tl.to(
+      imageRef.current,
+      {
+        x: direction === 1 ? "-100%" : "100%",
+        opacity: 0,
+        duration: 0.8,
+        ease: "power3.inOut",
+      },
+      0
+    );
 
-      gsap.fromTo(
-        imageRef.current,
-        { opacity: 0, x: slideInX },
-        { opacity: 1, x: 0, duration: 0.5, ease: 'power2.out' }
-      );
-    }, 500);
+    // Update index and reset for slide-in
+    tl.call(
+      () => {
+        setCurrentIndex(newIndex);
+        gsap.set(imageRef.current, {
+          x: direction === 1 ? "100%" : "-100%",
+          opacity: 0,
+        });
+      },
+      null,
+      0.8
+    );
 
-    gsap.fromTo(welcomeRef.current, { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 1, ease: 'power2.out', delay: 0.2 });
-    gsap.fromTo(line1Ref.current, { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 1, ease: 'power2.out', delay: 0.5 });
-    gsap.fromTo(line2Ref.current, { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 1, ease: 'power2.out', delay: 0.8 });
-    gsap.fromTo(line3Ref.current, { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 1, ease: 'power2.out', delay: 1.1 });
-    gsap.fromTo(oneStopRef.current, { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 1, ease: 'power2.out', delay: 1.4 });
-    gsap.fromTo(buttonRef.current, { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 1, ease: 'power2.out', delay: 1.7 });
-    gsap.fromTo(arrowRef.current, { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 1, ease: 'power2.out', delay: 2.0 });
-    gsap.fromTo(socialRef.current, { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 1, ease: 'power2.out', delay: 2.3, onComplete: () => gsap.set(socialRef.current, { clearProps: 'all' }) });
+    // Slide in the new image
+    tl.to(
+      imageRef.current,
+      {
+        x: "0%",
+        opacity: 1,
+        duration: 2.2,
+        ease: "power3.inOut",
+      },
+      0.8
+    );
+
+    // Reintroduce elements with a fixed delay (e.g., 1 second after image slide-in starts)
+    const fixedDelay = 0.8 + 1.0; // 0.8s (image slide-out) + 1s fixed delay
+    tl.to(
+      welcomeRef.current,
+      {
+        opacity: 1,
+        y: 0,
+        duration: 1,
+        ease: "power3.inOut",
+      },
+      fixedDelay
+    );
+    tl.to(
+      line1Ref.current,
+      {
+        opacity: 1,
+        y: 0,
+        duration: 1,
+        ease: "power3.inOut",
+      },
+      fixedDelay + 0.3
+    ); // Stagger slightly for visual flow
+    tl.to(
+      line2Ref.current,
+      {
+        opacity: 1,
+        y: 0,
+        duration: 1,
+        ease: "power3.inOut",
+      },
+      fixedDelay + 0.6
+    );
+    tl.to(
+      line3Ref.current,
+      {
+        opacity: 1,
+        y: 0,
+        duration: 1,
+        ease: "power3.inOut",
+      },
+      fixedDelay + 0.6
+    );
+    tl.to(
+      oneStopRef.current,
+      {
+        opacity: 1,
+        y: 0,
+        duration: 1,
+        ease: "power3.inOut",
+      },
+      fixedDelay + 0.6
+    );
+    tl.to(
+      buttonRef.current,
+      {
+        opacity: 1,
+        y: 0,
+        duration: 1,
+        ease: "power3.inOut",
+      },
+      fixedDelay + 0.6
+    );
+    tl.to(
+      arrowRef.current,
+      {
+        opacity: 1,
+        y: 0,
+        duration: 1,
+        ease: "power3.inOut",
+      },
+      fixedDelay + 0.6
+    );
+    tl.to(
+      socialRef.current,
+      {
+        opacity: 1,
+        y: 0,
+        duration: 1,
+        ease: "power3.inOut",
+        onComplete: () => gsap.set(socialRef.current, { clearProps: "all" }),
+      },
+      fixedDelay + 0.7
+    );
   };
 
   const handleAutoTransition = () => {
@@ -80,7 +200,11 @@ const Aboutus = () => {
   };
 
   const goToImage = (index) => {
-    const direction = index > currentIndex || (index === 0 && currentIndex === images.length - 1) ? 1 : -1;
+    const direction =
+      index > currentIndex ||
+      (index === 0 && currentIndex === images.length - 1)
+        ? 1
+        : -1;
     animateImage(index, direction);
   };
 
@@ -92,10 +216,10 @@ const Aboutus = () => {
           src={images[currentIndex]}
           alt={`About Us Slide ${currentIndex + 1} - Team or Mission Visual`}
           className="w-full h-full object-cover"
-          style={{ objectPosition: 'center' }}
+          style={{ objectPosition: "center" }}
           width={1200}
           height={520}
-          priority={currentIndex === 0}
+          priority
         />
         <div className="absolute top-0 left-0 flex flex-col justify-center items-start text-left p-4 sm:p-6 ml-2 sm:ml-3 w-[calc(100%-48px)] sm:w-[calc(100%-48px)] md:w-[calc(100%-56px)] lg:w-[calc(100%-64px)] gap-2 sm:gap-4 md:gap-6 z-10">
           <h2
@@ -129,7 +253,8 @@ const Aboutus = () => {
             ref={oneStopRef}
             className="text-xs sm:text-sm md:text-base lg:text-lg text-white max-w-[80%] sm:max-w-[70%] md:max-w-[60%] lg:max-w-xl"
           >
-            We're your one-stop destination for unlocking your potential and conquering the digital realm with confidence.
+            We're your one-stop destination for unlocking your potential and
+            conquering the digital realm with confidence.
           </h6>
           <button
             ref={buttonRef}
@@ -178,7 +303,11 @@ const Aboutus = () => {
             rel="noopener noreferrer"
             aria-label="Follow EduDen on Facebook"
           >
-            <img src="/follownow_icons/facebook.png" alt="Facebook" className="w-4 h-4 sm:w-4 sm:h-4 md:w-5 md:h-5 hover:opacity-80 transition-opacity" />
+            <img
+              src="/follownow_icons/facebook.png"
+              alt="Facebook"
+              className="w-4 h-4 sm:w-4 sm:h-4 md:w-5 md:h-5 hover:opacity-80 transition-opacity"
+            />
           </a>
           <a
             href="https://www.instagram.com/at_eduden/"
@@ -186,7 +315,11 @@ const Aboutus = () => {
             rel="noopener noreferrer"
             aria-label="Follow EduDen on Instagram"
           >
-            <img src="/follownow_icons/instagram.png" alt="Instagram" className="w-4 h-4 sm:w-4 sm:h-4 md:w-5 md:h-5 hover:opacity-80 transition-opacity" />
+            <img
+              src="/follownow_icons/instagram.png"
+              alt="Instagram"
+              className="w-4 h-4 sm:w-4 sm:h-4 md:w-5 md:h-5 hover:opacity-80 transition-opacity"
+            />
           </a>
           <a
             href="https://youtu.be/r8pDXO6zRUg?si=mJzIfCuuf2lVr7Y4"
@@ -194,7 +327,11 @@ const Aboutus = () => {
             rel="noopener noreferrer"
             aria-label="Follow EduDen on YouTube"
           >
-            <img src="/follownow_icons/youtube.png" alt="YouTube" className="w-4 h-4 sm:w-4 sm:h-4 md:w-5 md:h-5 hover:opacity-80 transition-opacity" />
+            <img
+              src="/follownow_icons/youtube.png"
+              alt="YouTube"
+              className="w-4 h-4 sm:w-4 sm:h-4 md:w-5 md:h-5 hover:opacity-80 transition-opacity"
+            />
           </a>
           <a
             href="https://www.linkedin.com/company/edu-den/"
@@ -202,20 +339,26 @@ const Aboutus = () => {
             rel="noopener noreferrer"
             aria-label="Follow EduDen on LinkedIn"
           >
-            <img src="/follownow_icons/linkedin.png" alt="LinkedIn" className="w-4 h-4 sm:w-4 sm:h-4 md:w-5 md:h-5 hover:opacity-80 transition-opacity" />
+            <img
+              src="/follownow_icons/linkedin.png"
+              alt="LinkedIn"
+              className="w-4 h-4 sm:w-4 sm:h-4 md:w-5 md:h-5 hover:opacity-80 transition-opacity"
+            />
           </a>
         </div>
 
         <div className="absolute bottom-1 sm:bottom-6 md:bottom-8 flex justify-center gap-1 sm:gap-2 w-full z-20">
           {images
             .map((_, index) => index)
-            .reverse() // Reverse dot order for right-to-left highlight movement
+            .reverse()
             .map((index) => (
               <button
                 key={index}
                 onClick={() => goToImage(index)}
                 className={`w-2 h-2 sm:w-3 sm:h-3 rounded-full ${
-                  currentIndex === index ? 'bg-yellow-400' : 'bg-white bg-opacity-50'
+                  currentIndex === index
+                    ? "bg-yellow-400"
+                    : "bg-white bg-opacity-50"
                 } hover:bg-opacity-75 transition-all duration-300`}
                 aria-label={`Go to slide ${index + 1}`}
               />
