@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+import React, { useState } from 'react';
 import Image from 'next/image';
 import { HiOutlineUsers } from 'react-icons/hi2';
 import { FaRegClock } from 'react-icons/fa';
@@ -10,12 +10,47 @@ import { IoArrowForward } from 'react-icons/io5';
 import { courses } from '@/backend/allcoursesdata';
 
 const Allcourse = () => {
+  const [selectedCategory, setSelectedCategory] = useState('All');
+
   const handleKeyDown = (e, id) => {
     if (e.key === 'Enter' || e.key === ' ') {
       e.preventDefault();
       console.log(`Pressed card: ${id}`);
     }
   };
+
+  const handleFilterClick = (category) => {
+    setSelectedCategory(category);
+  };
+
+  // Function to infer category from course title and id
+  const getCategory = (course) => {
+    const title = course.title.toLowerCase();
+    const id = course.id.toLowerCase();
+    if (title.includes('ui/ux') || id.includes('ui-ux')) return 'UI/UX';
+    if (title.includes('web development') || id.includes('web-development')) return 'Web App';
+    if (title.includes('ethical hacking') || id.includes('ethical-hacking')) return 'Ethical Hacking';
+    if (title.includes('network') || id.includes('network-administration')) return 'Cyber Security';
+    if (
+      title.includes('javascript') ||
+      title.includes('python') ||
+      title.includes('data science') ||
+      title.includes('devops') ||
+      id.includes('javascript') ||
+      id.includes('python') ||
+      id.includes('data-science') ||
+      id.includes('devops')
+    ) return 'Program';
+    return 'Other'; // Fallback category
+  };
+
+  // Filter categories based on course data
+  const filterCategories = ['All', 'UI/UX', 'Web App', 'Program', 'Ethical Hacking', 'Cyber Security'];
+
+  // Filter courses based on selected category
+  const filteredCourses = selectedCategory === 'All'
+    ? courses
+    : courses.filter(course => getCategory(course) === selectedCategory);
 
   return (
     <div className="bg-black p-4 sm:p-8">
@@ -39,10 +74,30 @@ const Allcourse = () => {
         </h1>
       </div>
 
+      {/* Filter Section */}
+      <div className="w-full max-w-7xl mx-auto mb-12">
+        <div className="flex flex-wrap justify-center gap-4 sm:gap-6">
+          {filterCategories.map((category) => (
+            <button
+              key={category}
+              className={`font-gucina text-white text-sm sm:text-base px-6 py-2 rounded-2xl transition-all duration-300 ${
+                selectedCategory === category
+                  ? 'bg-yellow-400 text-black'
+                  : 'bg-black hover:bg-yellow-400 hover:text-black'
+              }`}
+              onClick={() => handleFilterClick(category)}
+              aria-label={`Filter by ${category}`}
+            >
+              {category}
+            </button>
+          ))}
+        </div>
+      </div>
+
       {/* Course Cards Grid */}
       <div className="w-full max-w-7xl mx-auto">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 place-items-center">
-          {courses.map((course) => (
+          {filteredCourses.map((course) => (
             <div
               key={course.id}
               className="relative rounded-2xl w-full max-w-[24rem] h-[38.36rem] overflow-hidden cursor-pointer transition-transform duration-300 hover:shadow-lg focus:shadow-lg outline-none group"
@@ -77,7 +132,7 @@ const Allcourse = () => {
                     {/* Button + Stars */}
                     <div className="flex justify-between items-center mb-6 gap-x-4">
                       <button className="bg-yellow-400 text-black font-medium font-gucina rounded-2xl text-sm px-4 py-2 hover:bg-yellow-500 transition-colors">
-                        All Cyber Security
+                        {getCategory(course)}
                       </button>
 
                       <div className="flex gap-1 pr-12">
@@ -124,7 +179,7 @@ const Allcourse = () => {
                 <div className="absolute w-full h-full backface-hidden rotate-y-180 bg-yellow-400 p-6 flex flex-col justify-between">
                   <div className="flex justify-between items-center mb-6">
                     <button className="bg-black text-white font-medium font-gucina rounded-2xl text-sm px-4 py-2 hover:bg-gray-800 transition-colors">
-                      All Cyber Security
+                      {getCategory(course)}
                     </button>
                     <div className="flex gap-1">
                       {[...Array(5)].map((_, i) => (
@@ -177,7 +232,7 @@ const Allcourse = () => {
         </div>
       </div>
 
-      {/* Custom CSS for Flip */}
+      {/* Custom CSS for Flip and Filter */}
       <style jsx>{`
         .card-container {
           transform-style: preserve-3d;
