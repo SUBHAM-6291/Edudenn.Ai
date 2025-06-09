@@ -167,7 +167,7 @@ const Allcourse = () => {
                         <FaRegClock className="w-4 h-4 text-black" />
                         <p className="font-medium">{course.footerStats.duration}</p>
                       </div>
-                      <div className="flex items-center gap-2 text-gray-500">
+                      <div className="flex items-center gap-2 text-black">
                         <PiChatsCircle className="w-4 h-4 text-black" />
                         <p>{course.footerStats.reviews}</p>
                       </div>
@@ -219,7 +219,7 @@ const Allcourse = () => {
                         <FaRegClock className="w-4 h-4 text-black" />
                         <p className="font-medium">{course.footerStats.duration}</p>
                       </div>
-                      <div className="flex items-center gap-2 text-gray-500">
+                      <div className="flex items-center gap-2 text-black">
                         <PiChatsCircle className="w-4 h-4 text-black" />
                         <p>{course.footerStats.reviews}</p>
                       </div>
