@@ -12,6 +12,7 @@ import OurCollaboartion from './_components/OurCollaboartion'
 import Clan from './_components/Clan'
 import Course_categorys from './_components/Course_categorys'
 import Testimonal from './_components/Testimonal'
+import Placements from './_components/Placements'
 
 
 const page = () => {
@@ -20,8 +21,11 @@ const page = () => {
       <Navbar/>
       <Aboutus/>
       <Aboutus_Text/>
+       
       <Course_categorys/>
+      <Placements/>
       <AllCourse/>
+     
       <Video/>
       <OurCollaboartion/>
            <Clan/>
