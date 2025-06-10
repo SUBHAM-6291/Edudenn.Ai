@@ -3,12 +3,12 @@ import React, { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import { IoIosArrowRoundForward, IoIosArrowRoundBack } from "react-icons/io";
 import { IoHomeOutline } from "react-icons/io5";
-import { CgArrowLongDown } from "react-icons/cg";
 import { GoArrowDownRight } from "react-icons/go";
 import { gsap } from "gsap";
 
 const Aboutus = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const isAnimating = useRef(false);
   const imageRef = useRef(null);
   const welcomeRef = useRef(null);
   const line1Ref = useRef(null);
@@ -27,22 +27,29 @@ const Aboutus = () => {
   ];
 
   useEffect(() => {
-    // Preload all images to avoid loading delays
     images.forEach((src) => {
       const img = new window.Image();
       img.src = src;
     });
 
     const interval = setInterval(() => {
-      handleAutoTransition();
+      if (!isAnimating.current) {
+        handleAutoTransition();
+      }
     }, 5000);
     return () => clearInterval(interval);
   }, [currentIndex]);
 
   const animateImage = (newIndex, direction = 1) => {
-    const tl = gsap.timeline();
+    if (isAnimating.current) return;
+    isAnimating.current = true;
 
-    // Instantly hide all text, buttons, arrows, and social links
+    const tl = gsap.timeline({
+      onComplete: () => {
+        isAnimating.current = false;
+      },
+    });
+
     tl.set(
       [
         welcomeRef.current,
@@ -56,30 +63,31 @@ const Aboutus = () => {
       ],
       {
         opacity: 0,
-        y: 20, // Reset position for clean re-entry
+        y: 20,
         duration: 0,
       },
       0
     );
 
-    // Slide out the current image
+    // Image animation with slide and width transition (full-screen to normal)
     tl.to(
       imageRef.current,
       {
         x: direction === 1 ? "-100%" : "100%",
+        width: "100vw", // Stretch to full viewport width for exit
         opacity: 0,
         duration: 0.8,
-        ease: "power3.inOut",
+        ease: "power3.inOut", // Smooth ease-in-out
       },
       0
     );
 
-    // Update index and reset for slide-in
     tl.call(
       () => {
         setCurrentIndex(newIndex);
         gsap.set(imageRef.current, {
           x: direction === 1 ? "100%" : "-100%",
+          width: "100vw", // Start at full viewport width for entrance
           opacity: 0,
         });
       },
@@ -87,90 +95,26 @@ const Aboutus = () => {
       0.8
     );
 
-    // Slide in the new image
     tl.to(
       imageRef.current,
       {
         x: "0%",
+        width: "100%", // Return to container's normal width
         opacity: 1,
-        duration: 2.2,
-        ease: "power3.inOut",
+        duration: 1.2,
+        ease: "power3.inOut", // Smooth ease-in-out
       },
       0.8
     );
 
-    // Reintroduce elements with a fixed delay (e.g., 1 second after image slide-in starts)
-    const fixedDelay = 0.8 + 1.0; // 0.8s (image slide-out) + 1s fixed delay
-    tl.to(
-      welcomeRef.current,
-      {
-        opacity: 1,
-        y: 0,
-        duration: 1,
-        ease: "power3.inOut",
-      },
-      fixedDelay
-    );
-    tl.to(
-      line1Ref.current,
-      {
-        opacity: 1,
-        y: 0,
-        duration: 1,
-        ease: "power3.inOut",
-      },
-      fixedDelay + 0.3
-    ); // Stagger slightly for visual flow
-    tl.to(
-      line2Ref.current,
-      {
-        opacity: 1,
-        y: 0,
-        duration: 1,
-        ease: "power3.inOut",
-      },
-      fixedDelay + 0.6
-    );
-    tl.to(
-      line3Ref.current,
-      {
-        opacity: 1,
-        y: 0,
-        duration: 1,
-        ease: "power3.inOut",
-      },
-      fixedDelay + 0.6
-    );
-    tl.to(
-      oneStopRef.current,
-      {
-        opacity: 1,
-        y: 0,
-        duration: 1,
-        ease: "power3.inOut",
-      },
-      fixedDelay + 0.6
-    );
-    tl.to(
-      buttonRef.current,
-      {
-        opacity: 1,
-        y: 0,
-        duration: 1,
-        ease: "power3.inOut",
-      },
-      fixedDelay + 0.6
-    );
-    tl.to(
-      arrowRef.current,
-      {
-        opacity: 1,
-        y: 0,
-        duration: 1,
-        ease: "power3.inOut",
-      },
-      fixedDelay + 0.6
-    );
+    const fixedDelay = 0.8 + 1.0;
+    tl.to(welcomeRef.current, { opacity: 1, y: 0, duration: 1, ease: "power3.inOut" }, fixedDelay);
+    tl.to(line1Ref.current, { opacity: 1, y: 0, duration: 1, ease: "power3.inOut" }, fixedDelay + 0.3);
+    tl.to(line2Ref.current, { opacity: 1, y: 0, duration: 1, ease: "power3.inOut" }, fixedDelay + 0.6);
+    tl.to(line3Ref.current, { opacity: 1, y: 0, duration: 1, ease: "power3.inOut" }, fixedDelay + 0.6);
+    tl.to(oneStopRef.current, { opacity: 1, y: 0, duration: 1, ease: "power3.inOut" }, fixedDelay + 0.6);
+    tl.to(buttonRef.current, { opacity: 1, y: 0, duration: 1, ease: "power3.inOut" }, fixedDelay + 0.6);
+    tl.to(arrowRef.current, { opacity: 1, y: 0, duration: 1, ease: "power3.inOut" }, fixedDelay + 0.6);
     tl.to(
       socialRef.current,
       {
@@ -210,17 +154,19 @@ const Aboutus = () => {
 
   return (
     <div className="bg-black flex justify-center pt-2 sm:pt-12">
-      <div className="w-full max-w-[95%] sm:max-w-[90%] md:max-w-[85%] lg:max-w-[80%] h-[350px] sm:h-[400px] md:h-[450px] lg:h-[520px] rounded-2xl relative border-t-2 overflow-hidden">
+      <div className="w-full max-w-[95%] sm:max-w-[90%] md:max-w-[85%] lg:max-w-[80%] h-[350px] sm:h-[100px] md:h-[450px] lg:h-[520px] rounded-2xl relative border-t-2 overflow-hidden">
         <Image
           ref={imageRef}
           src={images[currentIndex]}
           alt={`About Us Slide ${currentIndex + 1} - Team or Mission Visual`}
           className="w-full h-full object-cover"
-          style={{ objectPosition: "center" }}
+          style={{ objectPosition: "center", willChange: "transform, opacity, width" }} // Optimize for width animation
           width={1200}
           height={520}
           priority
         />
+        {/* Semi-transparent black overlay */}
+        <div className="absolute top-0 left-0 w-full h-full bg-black/70 z-5" />
         <div className="absolute top-0 left-0 flex flex-col justify-center items-start text-left p-4 sm:p-6 ml-2 sm:ml-3 w-[calc(100%-48px)] sm:w-[calc(100%-48px)] md:w-[calc(100%-56px)] lg:w-[calc(100%-64px)] gap-2 sm:gap-4 md:gap-6 z-10">
           <h2
             ref={welcomeRef}
@@ -258,7 +204,8 @@ const Aboutus = () => {
           </h6>
           <button
             ref={buttonRef}
-            className="flex items-center bg-yellow-400 text-black font-semibold py-1 px-4 sm:py-2 sm:px-6 rounded-2xl hover:bg-yellow-500 transition-all duration-300 text-xs sm:text-sm md:text-base lg:text-lg"
+            className="flex items-center bg-yellow-400 text-black font-semibold py-1 px-4 sm:py-2 sm:px-6 rounded-2xl hover:bg-yellow-500 transition-colors duration-300 text-xs sm:text-sm md:text-base lg:text-lg"
+            style={{ willChange: "opacity, transform" }}
             aria-label="Discover More"
           >
             Discover More
@@ -272,14 +219,14 @@ const Aboutus = () => {
         >
           <button
             onClick={handlePrev}
-            className="text-white p-2 sm:p-3 focus:outline-none transition-all duration-300"
+            className="text-white p-2 sm:p-3 focus:outline-none transition-colors duration-300"
             aria-label="Previous Image"
           >
             <IoIosArrowRoundBack className="w-6 h-6 sm:w-8 sm:h-8" />
           </button>
           <button
             onClick={handleNext}
-            className="text-white p-2 sm:p-3 focus:outline-none transition-all duration-300"
+            className="text-white p-2 sm:p-3 focus:outline-none transition-colors duration-300"
             aria-label="Next Image"
           >
             <IoIosArrowRoundForward className="w-6 h-6 sm:w-8 sm:h-8" />
@@ -288,15 +235,19 @@ const Aboutus = () => {
 
         <div
           ref={socialRef}
-          className="absolute top-4 right-0 flex flex-col justify-center items-center bg-yellow-400 rounded-4xl p-2 gap-2 w-10 h-[200px] sm:p-2 sm:gap-3 sm:w-10 sm:h-[240px] sm:mr-1 md:w-12 md:h-[260px] md:mr-2 lg:w-14 lg:h-[280px] lg:mr-2 z-10"
+          className="absolute top-16 sm:top-20 md:top-24 lg:top-28 right-1 sm:right-1 md:right-2 lg:right-2 flex flex-col justify-start items-center bg-yellow-400 rounded-4xl p-2 gap-3 sm:gap-4 md:gap-5 w-10 sm:w-10 md:w-12 lg:w-14 h-[240px] sm:h-[280px] md:h-[300px] lg:h-[320px] z-10"
           aria-label="Follow Us Social Links"
         >
-          <div className="flex h-16 sm:h-16 items-center justify-center">
-            <span className="text-black font-semibold text-[8px] sm:text-[10px] md:text-xs transform rotate-90 origin-center whitespace-nowrap">
+          <div className="flex items-center justify-center w-full h-8 sm:h-10 md:h-12 lg:h-14">
+            <span className="text-black font-semibold text-[8px] sm:text-[10px] md:text-xs lg:text-sm transform rotate-90 origin-center whitespace-nowrap">
               Follow Us
             </span>
           </div>
-          <CgArrowLongDown className="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7 text-black" />
+          <img
+            src="/arrow.png"
+            alt="Down Arrow"
+            className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 lg:w-7 lg:h-7 rotate-180"
+          />
           <a
             href="https://www.facebook.com/profile.php?id=61557983775555"
             target="_blank"
@@ -306,7 +257,7 @@ const Aboutus = () => {
             <img
               src="/follownow_icons/facebook.png"
               alt="Facebook"
-              className="w-4 h-4 sm:w-4 sm:h-4 md:w-5 md:h-5 hover:opacity-80 transition-opacity"
+              className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 lg:w-7 lg:h-7 hover:opacity-80 transition-opacity"
             />
           </a>
           <a
@@ -318,7 +269,7 @@ const Aboutus = () => {
             <img
               src="/follownow_icons/instagram.png"
               alt="Instagram"
-              className="w-4 h-4 sm:w-4 sm:h-4 md:w-5 md:h-5 hover:opacity-80 transition-opacity"
+              className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 lg:w-7 lg:h-7 hover:opacity-80 transition-opacity"
             />
           </a>
           <a
@@ -330,7 +281,7 @@ const Aboutus = () => {
             <img
               src="/follownow_icons/youtube.png"
               alt="YouTube"
-              className="w-4 h-4 sm:w-4 sm:h-4 md:w-5 md:h-5 hover:opacity-80 transition-opacity"
+              className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 lg:w-7 lg:h-7 hover:opacity-80 transition-opacity"
             />
           </a>
           <a
@@ -342,7 +293,7 @@ const Aboutus = () => {
             <img
               src="/follownow_icons/linkedin.png"
               alt="LinkedIn"
-              className="w-4 h-4 sm:w-4 sm:h-4 md:w-5 md:h-5 hover:opacity-80 transition-opacity"
+              className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 lg:w-7 lg:h-7 hover:opacity-80 transition-opacity"
             />
           </a>
         </div>
@@ -359,7 +310,7 @@ const Aboutus = () => {
                   currentIndex === index
                     ? "bg-yellow-400"
                     : "bg-white bg-opacity-50"
-                } hover:bg-opacity-75 transition-all duration-300`}
+                } hover:bg-opacity-75 transition-colors duration-300`}
                 aria-label={`Go to slide ${index + 1}`}
               />
             ))}

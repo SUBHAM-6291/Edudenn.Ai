@@ -23,7 +23,7 @@ const Needhelp = () => {
             <span className="block">
               Join the Learning Party Now – No Boring Stuff Allowed.
             </span>
-            <span className="block lexend-body ">
+            <span className="block lexend-body">
               Join the Learning Party Now – No Boring Stuff Allowed.
             </span>
           </p>
@@ -31,9 +31,10 @@ const Needhelp = () => {
 
         <div className="md:w-1/2 flex justify-center md:justify-end">
           <button
-            className="font-gucina border border-[#FFD700] rounded-full bg-transparent text-[#FFD700] flex justify-center items-center gap-2 text-xs sm:text-base md:text-lg lg:text-xl xl:text-xl 2xl:text-2xl hover:bg-[#FFD700] hover:text-black hover:shadow-lg transition-all duration-700 ease-in-out w-[5rem] sm:w-[8.125rem] md:w-[9rem] lg:w-[10rem] h-[2rem] sm:h-[2.75rem] md:h-[2.875rem] lg:h-[3rem] rounded-[3.125rem]"
+            className="font-gucina border border-[#FFD700] rounded-full bg-transparent text-[#FFD700] flex justify-center items-center gap-2 sm:gap-3 text-xs sm:text-sm md:text-base lg:text-lg hover:bg-[#FFD700] hover:text-black hover:shadow-lg transition-all duration-300 ease-in-out w-full max-w-[7rem] sm:max-w-[8.5rem] md:max-w-[9.5rem] lg:max-w-[10.5rem] h-8 sm:h-10 md:h-11 lg:h-12 px-4 sm:px-5"
           >
-            Contact Us <FaLongArrowAltRight />
+            Contact Us
+            <FaLongArrowAltRight className="w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5" />
           </button>
         </div>
       </div>

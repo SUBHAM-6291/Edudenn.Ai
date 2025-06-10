@@ -3,9 +3,9 @@ import { TfiLayoutLineSolid } from 'react-icons/tfi';
 
 const OurCollaboration = () => {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-black py-6 sm:py-8 md:py-10 lg:py-12">
+    <div className="flex flex-col items-center justify-start h-auto bg-black py-2 sm:py-4 md:py-10 lg:py-12">
       {/* Header Section */}
-      <div className="flex items-center gap-4 sm:gap-6 md:gap-8 lg:gap-10 mb-4 sm:mb-6 md:mb-8">
+      <div className="flex items-center gap-4 sm:gap-6 md:gap-8 lg:gap-10 mb-2 sm:mb-6 md:mb-8">
         <TfiLayoutLineSolid className="text-yellow-400 text-xl sm:text-2xl md:text-3xl scale-125 sm:scale-150" />
         <span className="text-yellow-400 text-base sm:text-lg md:text-xl font-semibold">Our Partner</span>
         <TfiLayoutLineSolid className="text-yellow-400 text-xl sm:text-2xl md:text-3xl scale-125 sm:scale-150" />
@@ -13,7 +13,7 @@ const OurCollaboration = () => {
 
       {/* Title */}
       <h1
-        className="text-3xl sm:text-4xl md:text-5xl lg:text-[4.375rem] font-bold text-white relative mb-4 sm:mb-5 md:mb-6 flex gap-2 items-center h-[3rem] sm:h-[4rem] md:h-[5rem]"
+        className="text-3xl sm:text-4xl md:text-5xl lg:text-[4.375rem] font-bold text-white relative mb-2 sm:mb-5 md:mb-6 flex gap-2 items-center h-[2rem] sm:h-[4rem] md:h-[5rem]"
       >
         <span className="josefin-sans-title">Our</span>
         <span
@@ -31,7 +31,7 @@ const OurCollaboration = () => {
 
       {/* Description */}
       <p
-        className="text-center text-gray-300 max-w-md sm:max-w-lg md:max-w-2xl lg:max-w-3xl mx-auto mb-6 sm:mb-8 md:mb-10 lg:mb-12 lexend-body"
+        className="text-center text-gray-300 max-w-md sm:max-w-lg md:max-w-2xl lg:max-w-3xl mx-auto mb-4 sm:mb-2 md:mb-10 lg:mb-12 lexend-body"
         style={{
           fontWeight: 500,
           fontSize: '0.875rem',
