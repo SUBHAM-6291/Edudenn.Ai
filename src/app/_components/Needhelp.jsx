@@ -14,17 +14,17 @@ const Needhelp = () => {
         }}
       ></div>
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between">
-        <div className="md:w-1/2 text-white mb-8 md:mb-0">
-          <h1 className="font-gucina text-2xl sm:text-4xl md:text-5xl lg:text-4xl font-bold mb-4 whitespace-nowrap">
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center justify-center min-h-[300px]">
+        <div className="text-white mb-8 text-center">
+          <h1 className="font-gucina text-4xl sm:text-4xl md:text-6xl lg:text-6xl font-bold mb-4 whitespace-nowrap">
             Need Help?
           </h1>
-          <p className="lexend-body text-xs sm:text-base md:text-lg lg:text-lg max-w-[250px] sm:max-w-[350px] leading-tight">
-            Join the Learning Party Now – No Boring Stuff Allowed.
+          <p className="lexend-body text-xs sm:text-base md:text-lg lg:text-lg max-w-[250px] sm:max-w-[350px] leading-tight mx-auto">
+            Join the Learning Party Now – No Boring Stuff Allowed.   Join the Learning Party Now – No Boring Stuff Allowed.
           </p>
         </div>
 
-        <div className="md:w-1/2 flex justify-center md:justify-end">
+        <div className="flex justify-center">
           <button
             className="font-gucina border border-[#FFD700] rounded-full bg-transparent text-[#FFD700] flex items-center justify-center gap-2 text-sm sm:text-base md:text-lg hover:bg-[#FFD700] hover:text-black hover:shadow-lg transition-all duration-300 ease-in-out px-4 sm:px-6 py-2 sm:py-3 md:py-3.5 w-full sm:w-auto min-w-[120px] sm:min-w-[140px] md:min-w-[160px]"
           >

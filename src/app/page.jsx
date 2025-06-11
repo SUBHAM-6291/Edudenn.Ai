@@ -7,7 +7,7 @@ import Needhelp from './_components/Needhelp';
 import FAQ from './_components/FAQ';
 import Video from './_components/Video';
 import Upcomingevents from './_components/Upcomingevents';
-import AllCourse from './_components/Allcourse';
+import Allcourse from './_components/Allcourse';
 import OurCollaboration from './_components/OurCollaboartion';
 import Clan from './_components/Clan';
 import Course_categorys from './_components/Course_categorys';
@@ -24,17 +24,20 @@ const Page = () => {
           <Aboutus_Text />
           <Course_categorys />
           <Placements />
-          <AllCourse />
+          <Allcourse />
           <Video />
           <OurCollaboration />
-          <Clan />
+      
           <Upcomingevents />
-          <Testimonial />
+         
           <Needhelp />
           <FAQ />
-          <Footer />
         </div>
       </div>
+          <Clan />
+     <Testimonial />
+    
+      <Footer />
     </div>
   );
 };
