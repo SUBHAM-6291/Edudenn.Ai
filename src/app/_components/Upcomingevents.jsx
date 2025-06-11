@@ -82,7 +82,7 @@ const Upcomingevents = () => {
         {events.map((event, index) => (
           <div
             key={index}
-            className="relative rounded-2xl w-full max-w-sm min-h-[28rem] max-h-[36rem] overflow-hidden cursor-pointer transition-transform duration-300 hover:scale-105 focus:scale-105 hover:shadow-lg focus:shadow-lg"
+            className="relative rounded-2xl w-full max-w-sm min-h-[24rem] max-h-[30rem] sm:min-h-[26rem] sm:max-h-[32rem] md:min-h-[28rem] md:max-h-[34rem] overflow-hidden cursor-pointer transition-transform duration-300 hover:scale-105 focus:scale-105 hover:shadow-lg focus:shadow-lg"
             tabIndex={0}
           >
             <div
@@ -94,15 +94,14 @@ const Upcomingevents = () => {
 
             <div className="absolute inset-0 bg-black/60" />
 
-            <div className="relative z-10 flex flex-col items-center justify-start pt-48 sm:pt-56 h-full p-4 sm:p-6 text-white text-start">
-              <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 lexend-body">{event.title}</h3>
-              <p className="text-sm sm:text-base max-w-[90%] leading-relaxed lexend-body">{event.description}</p>
+            <div className="relative z-10 flex flex-col items-start justify-start pt-32 sm:pt-36 md:pt-40 h-full p-4 sm:p-6 text-white text-left">
+              <h3 className="text-lg sm:text-xl md:text-2xl font-bold mb-2 sm:mb-3 lexend-body">{event.title}</h3>
+              <p className="text-xs sm:text-sm md:text-base max-w-[90%] leading-relaxed lexend-body line-clamp-4">{event.description}</p>
             </div>
 
             <div className="absolute bottom-0 left-0 right-0 p-3 sm:p-4 text-white text-sm sm:text-base lexend-body">
               <div className="absolute inset-0 bg-gradient-to-t from-black/90 to-transparent pointer-events-none"></div>
-
-              <div className="relative flex items-center justify-center gap-3 sm:gap-4">
+              <div className="relative flex items-center justify-between w-full gap-3 sm:gap-4">
                 <div className="flex items-center gap-2">
                   <img src="/clock.png" alt="Clock" className="w-4 h-4 sm:w-5 sm:h-5" />
                   <p className="font-medium lexend-body">{event.time}</p>

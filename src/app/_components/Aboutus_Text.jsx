@@ -12,7 +12,7 @@ const Aboutus_Text = () => {
             <span className="absolute left-0 bottom-0 w-0 h-1 bg-[#FFD700] transition-all duration-500 ease-in-out group-hover:w-full"></span>
           </h2>
           <button
-            className="font-gucina border border-[#FFD700] rounded-full bg-transparent text-[#FFD700] flex justify-center items-center gap-2 text-base sm:text-lg md:text-lg lg:text-xl xl:text-xl 2xl:text-2xl hover:bg-[#FFD700] hover:text-black hover:shadow-lg transition-all duration-700 ease-in-out w-36 sm:w-40 md:w-44 h-10 sm:h-11 md:h-12 mt-6 sm:mt-12 md:mt-16 lg:mt-18 xl:mt-16 2xl:mt-24 animate-slide-up"
+            className="font-gucina  border border-[#FFD700] rounded-full bg-transparent text-[#FFD700] flex justify-center items-center gap-2 text-base sm:text-lg md:text-lg lg:text-xl xl:text-xl 2xl:text-2xl hover:bg-[#FFD700] hover:text-black hover:shadow-lg transition-all duration-700 ease-in-out w-36 sm:w-40 md:w-44 h-10 sm:h-11 md:h-12 mt-6 sm:mt-12 md:mt-16 lg:mt-18 xl:mt-16 2xl:mt-24 animate-slide-up"
           >
             Read More <FaLongArrowAltRight />
           </button>

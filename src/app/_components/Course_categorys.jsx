@@ -80,7 +80,7 @@ const Course_categorys = () => {
   };
 
   return (
-    <div className="bg-black py-8 sm:py-12 md:py-14 lg:py-16 xl:py-20 2xl:py-24">
+    <div className="bg-black py-8 sm:py-12 md:py-14 lg:py-8 xl:py-6 2xl:py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 2xl:px-16">
         {/* Heading Icons Row */}
         <div className="flex items-center gap-2 mb-6 sm:mb-8 justify-center">
@@ -111,7 +111,7 @@ const Course_categorys = () => {
               tabIndex={0}
               onClick={() => handleClick(course)}
               onKeyDown={(e) => handleKeyDown(e, course)}
-              className="relative rounded-2xl w-full h-[20rem] sm:h-[22rem] md:h-[25rem] overflow-hidden cursor-pointer transition-transform duration-300 hover:scale-[1.03] focus:scale-[1.03] hover:shadow-lg focus:shadow-lg outline-none group bg-[#1a1a1a]"
+              className="relative rounded-2xl w-full h-[20rem] sm:h-[22rem] md:h-[25rem] overflow-hidden cursor-pointer hover:shadow-lg focus:shadow-lg outline-none group bg-[#1a1a1a]"
               aria-label={`View details for ${course.title} category`}
             >
               {/* Background Image and Overlay (Visible on Hover) */}
@@ -135,10 +135,10 @@ const Course_categorys = () => {
                 <div className="relative w-[3.5rem] h-[3.5rem] sm:w-[4rem] sm:h-[4rem] md:w-[4.5rem] md:h-[4.5rem] mb-3 sm:mb-4 rounded-full bg-yellow-400 group-hover:bg-[#1a1a1a] transition-colors duration-300 flex items-center justify-center">
                   {course.icon}
                 </div>
-                <h3 className="text-lg sm:text-xl md:text-2xl font-bold mb-3 sm:mb-4 text-center font-gucina">
+                <h3 className="text-lg sm:text-xl md:text-2xl font-bold mb-3 sm:mb-4 text-center font-gucina text-white group-hover:text-black transition-colors duration-300">
                   {course.title}
                 </h3>
-                <p className="text-xs sm:text-sm md:text-base max-w-[90%] mx-auto leading-relaxed lexend-body text-white text-center">
+                <p className="text-xs sm:text-sm md:text-base max-w-[90%] mx-auto leading-relaxed lexend-body text-white group-hover:text-black transition-colors duration-300 text-center">
                   {course.description}
                 </p>
               </div>
@@ -146,7 +146,7 @@ const Course_categorys = () => {
               {/* Footer Arrow */}
               <div className="absolute bottom-0 left-0 right-0 p-6 sm:p-8 md:p-10 z-10">
                 <div className="flex justify-center items-center">
-                  <LiaLongArrowAltRightSolid className="w-10 h-10 sm:w-12 sm:h-12 md:w-16 md:h-16 text-white" />
+                  <LiaLongArrowAltRightSolid className="w-10 h-10 sm:w-12 sm:h-12 md:w-16 md:h-16 text-white group-hover:text-black transition-colors duration-300" />
                 </div>
               </div>
             </div>

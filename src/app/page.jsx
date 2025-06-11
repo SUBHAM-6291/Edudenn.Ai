@@ -1,42 +1,42 @@
-import React from 'react'
-import Navbar from './_components/Navbar'
-import Aboutus from './_components/Aboutus'
-import Aboutus_Text from './_components/Aboutus_Text'
-import Footer from './_components/Footer'
-import Needhelp from './_components/Needhelp'
-import FAQ from './_components/FAQ'
-import Video from './_components/Video'
-import Upcomingevents from './_components/Upcomingevents'
-import AllCourse from './_components/Allcourse'
-import OurCollaboartion from './_components/OurCollaboartion'
-import Clan from './_components/Clan'
-import Course_categorys from './_components/Course_categorys'
-import Testimonal from './_components/Testimonal'
-import Placements from './_components/Placements'
+import React from 'react';
+import Navbar from './_components/Navbar';
+import Aboutus from './_components/Aboutus';
+import Aboutus_Text from './_components/Aboutus_Text';
+import Footer from './_components/Footer';
+import Needhelp from './_components/Needhelp';
+import FAQ from './_components/FAQ';
+import Video from './_components/Video';
+import Upcomingevents from './_components/Upcomingevents';
+import AllCourse from './_components/Allcourse';
+import OurCollaboration from './_components/OurCollaboartion';
+import Clan from './_components/Clan';
+import Course_categorys from './_components/Course_categorys';
+import Testimonial from './_components/Testimonal';
+import Placements from './_components/Placements';
 
-
-const page = () => {
+const Page = () => {
   return (
-    <div>
-      <Navbar/>
-      <Aboutus/>
-      <Aboutus_Text/>
-       
-      <Course_categorys/>
-      <Placements/>
-      <AllCourse/>
-     
-      <Video/>
-      <OurCollaboartion/>
-           <Clan/>
-      <Upcomingevents/>
- <Testimonal/>
-      <Needhelp/>
-       <FAQ/>
-      <Footer/>
-      
+    <div className="bg-black">
+      <Navbar />
+      <div className="flex flex-col items-center py-4 sm:py-8 px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 2xl:px-14 watch:px-2">
+        <div className="w-full max-w-[1280px] space-y-8 sm:space-y-12 watch:space-y-4">
+          <Aboutus />
+          <Aboutus_Text />
+          <Course_categorys />
+          <Placements />
+          <AllCourse />
+          <Video />
+          <OurCollaboration />
+          <Clan />
+          <Upcomingevents />
+          <Testimonial />
+          <Needhelp />
+          <FAQ />
+          <Footer />
+        </div>
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default page
+export default Page;

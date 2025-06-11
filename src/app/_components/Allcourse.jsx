@@ -80,9 +80,9 @@ const Allcourse = () => {
         </div>
 
         {/* Filter Section */}
-        <div className="w-full mb-8 sm:mb-10 md:mb-12">
+        <div className="w-full  mb-8 sm:mb-10 md:mb-12">
           {/* Dropdown for Small and Tablet Devices */}
-          <div className="block sm:hidden">
+          <div className="block md:hidden sm:hidden">
             <select
               value={selectedCategory}
               onChange={handleDropdownChange}
@@ -98,7 +98,7 @@ const Allcourse = () => {
           </div>
 
           {/* Buttons for Larger Devices */}
-          <div className="hidden sm:flex flex-wrap justify-center gap-2 sm:gap-4 md:gap-6">
+          <div className="hidden sm:flex flex-wrap justify-start gap-2 sm:gap-4 md:gap-6">
             {filterCategories.map((category) => (
               <button
                 key={category}
