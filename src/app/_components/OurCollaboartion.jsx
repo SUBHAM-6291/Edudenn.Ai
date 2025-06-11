@@ -20,7 +20,7 @@ const OurCollaboration = () => {
 
     const animation = gsap.to(logosContainer, {
       x: -totalWidth,
-      duration: 120,
+      duration: 250,
       ease: 'none',
       repeat: -1,
       modifiers: {

@@ -65,7 +65,7 @@ const Placements = () => {
 
         const animation = gsap.to(ref, {
           x: targetX,
-          duration: 150 + idx * 10,
+          duration: 280 + idx * 10,
           ease: 'none',
           repeat: -1,
           modifiers: {

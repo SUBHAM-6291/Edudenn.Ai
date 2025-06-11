@@ -92,21 +92,21 @@ const Upcomingevents = () => {
               }}
             />
 
-            <div className="absolute inset-0 bg-black/60" />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/70 to-black/40" />
 
-            <div className="relative z-10 flex flex-col items-start justify-start pt-32 sm:pt-36 md:pt-40 h-full p-4 sm:p-6 text-white text-left">
-              <h3 className="text-lg sm:text-xl md:text-2xl font-bold mb-2 sm:mb-3 lexend-body">{event.title}</h3>
-              <p className="text-xs sm:text-sm md:text-base max-w-[90%] leading-relaxed lexend-body line-clamp-4">{event.description}</p>
+            <div className="absolute bottom-12 sm:bottom-16 md:bottom-20 left-0 right-0 z-10 flex flex-col items-center text-white text-center p-4 sm:p-6">
+              <h3 className="text-lg sm:text-xl md:text-2xl font-bold mb-1 sm:mb-2 lexend-body">{event.title}</h3>
+              <p className="text-xs sm:text-sm md:text-base max-w-[90%] leading-relaxed lexend-body line-clamp-3">{event.description}</p>
             </div>
 
             <div className="absolute bottom-0 left-0 right-0 p-3 sm:p-4 text-white text-sm sm:text-base lexend-body">
               <div className="absolute inset-0 bg-gradient-to-t from-black/90 to-transparent pointer-events-none"></div>
-              <div className="relative flex items-center justify-between w-full gap-3 sm:gap-4">
+              <div className="relative flex items-center justify-center w-full gap-6 sm:gap-8">
                 <div className="flex items-center gap-2">
                   <img src="/clock.png" alt="Clock" className="w-4 h-4 sm:w-5 sm:h-5" />
                   <p className="font-medium lexend-body">{event.time}</p>
                 </div>
-                <div className="flex items-center gap-2 text-gray-300">
+                <div className="flex items-center gap-2 text-gray-200">
                   <img src="/calendar.png" alt="Calendar" className="w-4 h-4 sm:w-5 sm:h-5" />
                   <p className="lexend-body">{event.year}</p>
                 </div>
