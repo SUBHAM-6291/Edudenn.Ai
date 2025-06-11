@@ -27,7 +27,7 @@ const Navbar = () => {
     <nav
       className={`top-0 left-0 w-full z-50 font-gucina transition-colors duration-500 bg-black text-white`}
     >
-      <div className="max-w-7xl mx-auto flex items-center justify-between py-4 px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12">
+      <div className="max-w-7xl mx-auto flex items-center justify-between py-4 px-4 sm:px-5 md:px-8 lg:px-10 xl:px-12">
         <div className="flex-shrink-0 w-32 sm:w-36 md:w-40 lg:w-48 xl:w-52">
           <img
             src="/eduden.png"

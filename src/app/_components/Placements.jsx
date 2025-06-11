@@ -118,9 +118,9 @@ const Placements = () => {
           {/* Right Section with Strong Left & Right Shadow */}
           <div className="w-full lg:w-[45%] xl:w-[44%] 2xl:max-w-[633px] bg-black/70 rounded-md p-4 sm:p-6 watch:p-2 min-h-[300px] max-h-[464px] 2xl:h-[464px] relative overflow-hidden">
             {/* Wider Left Shadow */}
-            <div className="absolute top-0 left-0 h-full w-24 sm:w-[25rem] bg-gradient-to-r from-black to-transparent z-20 pointer-events-none" />
+            <div className="absolute top-0 left-0 h-full w-16 sm:w-24 lg:w-[25rem] watch:w-12 bg-gradient-to-r from-black to-transparent z-20 pointer-events-none" />
             {/* Wider Right Shadow */}
-            <div className="absolute top-0 right-0 h-full w-24 sm:w-[25rem] bg-gradient-to-l from-black to-transparent z-20 pointer-events-none" />
+            <div className="absolute top-0 right-0 h-full w-16 sm:w-24 lg:w-[25rem] watch:w-12 bg-gradient-to-l from-black to-transparent z-20 pointer-events-none" />
 
             <div className="relative space-y-3 sm:space-y-4 watch:space-y-2 h-full flex flex-col justify-between">
               {imageRows.map((row, rowIdx) => (
@@ -149,7 +149,6 @@ const Placements = () => {
               ))}
             </div>
           </div>
-
         </div>
       </div>
     </div>

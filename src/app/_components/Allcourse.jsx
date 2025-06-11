@@ -80,7 +80,7 @@ const Allcourse = () => {
         </div>
 
         {/* Filter Section */}
-        <div className="w-full  mb-8 sm:mb-10 md:mb-12">
+        <div className="w-full mb-8 sm:mb-10 md:mb-12">
           {/* Dropdown for Small and Tablet Devices */}
           <div className="block md:hidden sm:hidden">
             <select
@@ -122,7 +122,7 @@ const Allcourse = () => {
             {filteredCourses.map((course) => (
               <div
                 key={course.id}
-                className="relative rounded-2xl w-full max-w-[20rem] sm:max-w-[22rem] md:max-w-[24rem] h-[34rem] sm:h-[36rem] md:h-[38.36rem] overflow-hidden cursor-pointer transition-transform duration-300 hover:shadow-lg focus:shadow-lg outline-none group"
+                className="relative rounded-2xl w-full max-w-[20rem] sm:max-w-[22rem] md:max-w-[24rem] h-[36rem] sm:h-[38rem] md:h-[40.36rem] overflow-hidden cursor-pointer transition-transform duration-300 hover:shadow-lg focus:shadow-lg outline-none group"
                 tabIndex={0}
                 onKeyDown={(e) => handleKeyDown(e, course.id)}
                 aria-label={`Course card: ${course.title}`}
@@ -142,7 +142,7 @@ const Allcourse = () => {
                         sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33.33vw"
                       />
                     </div>
-                    <div className="absolute right-2 top-1/2 -translate-y-1/2 bg-yellow-400 rounded-full w-16 sm:w-18 md:w-20 h-16 sm:h-18 md:h-20 flex items-center justify-center text-black font-bold text-base sm:text-lg md:text-xl z-10 group-hover:opacity-0 transition-opacity duration-300">
+                    <div className="absolute right-2 top-1/2 -translate-y-1/2 bg-yellow-400 rounded-full w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 lg:w-18 lg:h-18 2xl:w-[102.12608337402344px] 2xl:h-[102.12608337402344px] flex items-center justify-center text-black font-bold text-xs sm:text-sm md:text-base lg:text-lg 2xl:text-xl z-10 group-hover:opacity-0 transition-opacity duration-300">
                       ${course.price}
                     </div>
                     <div className="relative z-0 flex flex-col justify-start h-[calc(50%-4rem)] p-4 sm:p-5 md:p-6 text-black">
@@ -150,11 +150,11 @@ const Allcourse = () => {
                         <button className="bg-yellow-400 text-black font-medium font-gucina rounded-2xl text-xs sm:text-sm px-3 sm:px-4 py-1.5 sm:py-2 hover:bg-yellow-500 transition-colors">
                           {getCategory(course)}
                         </button>
-                        <div className="flex gap-1 pr-8 sm:pr-10 md:pr-12">
+                        <div className="flex gap-1 pr-2 sm:pr-4 md:pr-6 lg:pr-8">
                           {[...Array(5)].map((_, i) => (
                             <svg
                               key={i}
-                              className="w-4 sm:w-5 h-4 sm:h-5 text-yellow-400 fill-current"
+                              className="w-3.5 h-3.5 sm:w-4 sm:h-4 md:w-4.5 md:h-4.5 lg:w-5 lg:h-5 text-yellow-400 fill-current"
                               viewBox="0 0 24 24"
                             >
                               <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
@@ -169,19 +169,19 @@ const Allcourse = () => {
                         {course.description}
                       </p>
                     </div>
-                    <div className="absolute bottom-0 left-0 right-0 p-3 sm:p-4 text-black text-xs sm:text-sm md:text-base lexend-body">
+                    <div className="absolute bottom-0 left-0 right-0 p-3 sm:p-4 text-black text-xs sm:text-sm lexend-body">
                       <div className="w-full h-px bg-gray-300 mb-2 sm:mb-3"></div>
-                      <div className="relative flex items-center justify-center gap-8 sm:gap-16 md:gap-20">
-                        <div className="flex items-center gap-1 sm:gap-2">
-                          <HiOutlineUsers className="w-3 sm:w-4 h-3 sm:h-4 text-black" />
+                      <div className="flex items-center justify-center gap-16">
+                        <div className="flex items-center gap-1">
+                          <HiOutlineUsers className="w-3 h-3 text-black" />
                           <p className="font-medium">{course.footerStats.enrolled}</p>
                         </div>
-                        <div className="flex items-center gap-1 sm:gap-2">
-                          <FaRegClock className="w-3 sm:w-4 h-3 sm:h-4 text-black" />
+                        <div className="flex items-center gap-1">
+                          <FaRegClock className="w-3 h-3 text-black" />
                           <p className="font-medium">{course.footerStats.duration}</p>
                         </div>
-                        <div className="flex items-center gap-1 sm:gap-2 text-black">
-                          <PiChatsCircle className="w-3 sm:w-4 h-3 sm:h-4 text-black" />
+                        <div className="flex items-center gap-1">
+                          <PiChatsCircle className="w-3 h-3 text-black" />
                           <p>{course.footerStats.reviews}</p>
                         </div>
                       </div>
@@ -221,19 +221,19 @@ const Allcourse = () => {
                         ${course.price}
                       </div>
                     </div>
-                    <div className="p-3 sm:p-4 text-black text-xs sm:text-sm md:text-base lexend-body">
-                      <div className="w-full h-px bg-gray-300 mb-2 sm:mb-3"></div>
-                      <div className="relative flex items-center justify-center gap-8 sm:gap-16 md:gap-20">
-                        <div className="flex items-center gap-1 sm:gap-2">
-                          <HiOutlineUsers className="w-3 sm:w-4 h-3 sm:h-4 text-black" />
+                    <div className="p-3 sm:p-4 text-black text-xs sm:text-sm lexend-body">
+                      <div className="w-full h-px bg-black mb-2 sm:mb-3"></div>
+                      <div className="flex items-center justify-center gap-20">
+                        <div className="flex items-center gap-1">
+                          <HiOutlineUsers className="w-3 h-3 text-black" />
                           <p className="font-medium">{course.footerStats.enrolled}</p>
                         </div>
-                        <div className="flex items-center gap-1 sm:gap-2">
-                          <FaRegClock className="w-3 sm:w-4 h-3 sm:h-4 text-black" />
+                        <div className="flex items-center gap-1">
+                          <FaRegClock className="w-3 h-3 text-black" />
                           <p className="font-medium">{course.footerStats.duration}</p>
                         </div>
-                        <div className="flex items-center gap-1 sm:gap-2 text-black">
-                          <PiChatsCircle className="w-3 sm:w-4 h-3 sm:h-4 text-black" />
+                        <div className="flex items-center gap-1">
+                          <PiChatsCircle className="w-3 h-3 text-black" />
                           <p>{course.footerStats.reviews}</p>
                         </div>
                       </div>

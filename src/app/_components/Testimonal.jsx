@@ -20,9 +20,9 @@ const Testimonial = () => {
       >
         <div className="absolute inset-0 bg-black/30" />
 
-        <div className="relative z-10 flex flex-col md:flex-row items-center justify-between w-full max-w-6xl gap-8 sm:gap-12 md:gap-16 lg:gap-20">
-          {/* TEXT CONTENT - First on all screens */}
-          <div className="flex flex-col items-start w-full md:w-1/2 space-y-4 sm:space-y-6 text-center md:text-left">
+        <div className="relative z-10 flex flex-col lg:flex-row-reverse items-center justify-between w-full max-w-6xl gap-8 sm:gap-12 md:gap-16 lg:gap-20">
+          {/* TEXT CONTENT */}
+          <div className="flex flex-col items-start w-full lg:w-1/2 space-y-4 sm:space-y-6 text-center lg:text-left">
             <h2 className="text-yellow-400 text-2xl sm:text-3xl md:text-4xl font-extrabold font-gucina">
               Testimonial
             </h2>
@@ -45,8 +45,8 @@ const Testimonial = () => {
             </button>
           </div>
 
-          {/* TESTIMONIAL CARD - Appears second (below) on small, right on desktop */}
-          <div className="flex flex-col items-start w-full md:w-1/2 space-y-4 sm:space-y-6">
+          {/* TESTIMONIAL CARD */}
+          <div className="flex flex-col items-start w-full lg:w-1/2 space-y-4 sm:space-y-6">
             <div className="relative flex p-4 sm:p-6 rounded-[10px] shadow-lg bg-[#141414] w-full h-auto gap-4 items-start">
               <img
                 src="/66.QuoteRight.png"
