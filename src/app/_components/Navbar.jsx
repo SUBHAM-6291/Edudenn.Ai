@@ -33,6 +33,7 @@ const Navbar = () => {
           flex items-center justify-between 
           py-0.5 sm:py-1 md:py-1 lg:py-1 xl:py-0.5 2xl:py-1
 
+
           px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 2xl:px-14
         "
       >
