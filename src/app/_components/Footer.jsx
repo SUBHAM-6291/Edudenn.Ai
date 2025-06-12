@@ -50,12 +50,7 @@ const Footer = () => {
                 "
                 loading="lazy"
               />
-              <p
-                className="
-                  lexend-body text-[0.6rem] sm:text-xs md:text-sm lg:text-base 
-                  max-w-[150px] sm:max-w-[200px] md:max-w-xs
-                "
-              >
+              <p className="lexend-body text-[14px] font-medium max-w-[150px] sm:max-w-[200px] md:max-w-xs">
                 Empowering minds through quality education, innovative courses, and a vibrant learning community dedicated to lifelong growth and success.
               </p>
               <div className="flex space-x-2 sm:space-x-2 md:space-x-3">
@@ -89,9 +84,7 @@ const Footer = () => {
 
             {/* Section 2: Quick Links */}
             <div className="space-y-4 sm:space-y-4 md:space-y-5">
-              <h3 className="font-gucina text-[0.7rem] sm:text-sm md:text-base lg:text-lg font-semibold">
-                Quick Links
-              </h3>
+              <h3 className="font-gucina text-base font-semibold">Quick Links</h3>
               <ul className="space-y-2 sm:space-y-2">
                 {['Home', 'About Us', 'Courses', 'Contact'].map((link, i) => (
                   <li key={i} className="flex items-center">
@@ -106,10 +99,7 @@ const Footer = () => {
                     />
                     <a
                       href="#"
-                      className="
-                        hover:text-yellow-500 transition-colors 
-                        text-[0.6rem] sm:text-xs md:text-sm lg:text-base
-                      "
+                      className="text-[14px] font-medium hover:text-yellow-500 transition-colors"
                       aria-label={`Go to ${link} page`}
                     >
                       {link}
@@ -121,9 +111,7 @@ const Footer = () => {
 
             {/* Section 3: Learning Platform */}
             <div className="space-y-4 sm:space-y-4 md:space-y-5">
-              <h3 className="font-gucina text-[0.7rem] sm:text-sm md:text-base lg:text-lg font-semibold">
-                Learning Platform
-              </h3>
+              <h3 className="font-gucina text-base font-semibold">Learning Platform</h3>
               <div className="space-y-2 sm:space-y-2">
                 {[
                   { name: 'Facebook', href: 'https://www.facebook.com/profile.php?id=61557983775555', icon: '/Footer_icons/facebook.png' },
@@ -136,10 +124,7 @@ const Footer = () => {
                     href={href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="
-                      flex items-center hover:text-yellow-500 transition-colors 
-                      text-[0.6rem] sm:text-xs md:text-sm lg:text-base
-                    "
+                    className="flex items-center text-[14px] font-medium hover:text-yellow-500 transition-colors"
                   >
                     <img
                       src={icon}
@@ -159,42 +144,29 @@ const Footer = () => {
 
             {/* Section 4: Get in Touch */}
             <div className="space-y-4 sm:space-y-4 md:space-y-5">
-              <h3 className="font-gucina text-[0.7rem] sm:text-sm md:text-base lg:text-lg font-semibold">
-                Get in Touch
-              </h3>
+              <h3 className="font-gucina text-base font-semibold">Get in Touch</h3>
               <ul className="space-y-2 sm:space-y-2">
                 <li>
-                  <span className="text-[0.6rem] sm:text-xs md:text-sm lg:text-base">Phone:</span>
+                  <span className="text-[14px] font-medium">Phone:</span>
                   <a
                     href="tel:+8801745349414"
-                    className="
-                      hover:text-yellow-500 transition-colors 
-                      text-[0.6rem] sm:text-xs md:text-sm lg:text-base block
-                    "
+                    className="text-[14px] font-medium hover:text-yellow-500 transition-colors block"
                   >
                     01745349414
                   </a>
                 </li>
                 <li>
-                  <span className="text-[0.6rem] sm:text-xs md:text-sm lg:text-base">Email:</span>
+                  <span className="text-[14px] font-medium">Email:</span>
                   <a
                     href="mailto:bd@eduden.com"
-                    className="
-                      hover:text-yellow-500 transition-colors 
-                      text-[0.6rem] sm:text-xs md:text-sm lg:text-base block
-                    "
+                    className="text-[14px] font-medium hover:text-yellow-500 transition-colors block"
                   >
                     bd@eduden.com
                   </a>
                 </li>
                 <li>
-                  <span className="text-[0.6rem] sm:text-xs md:text-sm lg:text-base">Location:</span>
-                  <span
-                    className="
-                      text-[0.6rem] sm:text-xs md:text-sm lg:text-base 
-                      hover:text-yellow-500 transition-colors block
-                    "
-                  >
+                  <span className="text-[14px] font-medium">Location:</span>
+                  <span className="text-[14px] font-medium hover:text-yellow-500 transition-colors block">
                     Dhaka, Kollanpur, Bridge er Niche
                   </span>
                 </li>
@@ -209,7 +181,7 @@ const Footer = () => {
           <div
             className="
               text-left sm:text-center 
-              text-[0.6rem] sm:text-xs md:text-sm lg:text-base 
+              text-[14px] font-medium 
               pt-2 sm:pt-4 md:pt-6 lg:pt-8 pb-2 sm:pb-4
             "
           >

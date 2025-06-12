@@ -36,15 +36,15 @@ const FAQ = () => {
   return (
     <div className="bg-black text-white py-12 lg:py-16 xl:py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 flex flex-col lg:flex-row gap-10">
-      
         <div className="lg:w-[35rem] flex flex-col justify-start">
-          <div className="mb-6 text-center">
+          <div className="mb-6 text-left lg:text-center">
             <h1 className="font-gucina text-4xl font-bold relative group">
               Frequently
-              <span className="absolute left-1/2 bottom-[-2px] w-0 h-1 bg-yellow-300 transition-all duration-300 ease-in-out group-hover:w-full transform -translate-x-1/2"></span>
+              <span className="absolute left-1/2 bottom-[-2px] w-0 h-1 bg-yellow-300 transition-all duration-300 ease-in-out group-hover:w-full -translate-x-1/2"></span>
             </h1>
-            <h2 className="font-gucina text-3xl font-semibold mt-1">
+            <h2 className="font-gucina text-3xl font-semibold mt-1 relative group">
               Asked Questions
+              <span className="absolute left-1/2 bottom-[-2px] w-0 h-1 bg-yellow-300 transition-all duration-300 ease-in-out group-hover:w-full -translate-x-1/2"></span>
             </h2>
           </div>
 
@@ -59,7 +59,7 @@ const FAQ = () => {
                 role="button"
                 aria-expanded={openSection === index}
               >
-                <h3 className="text-white text-base sm:text-lg font-semibold">
+                <h3 className="text-white text-base sm:text-lg font-semibold text-left">
                   {faq.title}
                 </h3>
                 <IoIosArrowDown
@@ -73,7 +73,7 @@ const FAQ = () => {
                   openSection === index ? 'max-h-[500px] mt-2' : 'max-h-0'
                 }`}
               >
-                <p className="text-gray-300 text-sm sm:text-base leading-relaxed">
+                <p className="text-gray-300 text-sm sm:text-base leading-relaxed text-left">
                   {faq.content}
                 </p>
               </div>
@@ -81,7 +81,7 @@ const FAQ = () => {
           ))}
         </div>
 
-        {/* Right Side: Contact Card */}
+        {/* Right Side: Contact Card (Unchanged) */}
         <div className="lg:w-[35rem] bg-white/10 rounded-2xl p-8 flex flex-col items-center justify-center">
           <img
             src="chatsvg.png"
