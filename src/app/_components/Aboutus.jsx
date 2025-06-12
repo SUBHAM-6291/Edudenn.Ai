@@ -241,7 +241,7 @@ const Aboutus = () => {
           >
             <span
               className={`
-                text-black font-semibold
+                text-black font-semibold  lg:translate-y-3
                 text-[8px] sm:text-[10px] md:text-xs lg:text-sm 2xl:text-sm
                 transform rotate-90 origin-center whitespace-nowrap
               `}
@@ -252,7 +252,7 @@ const Aboutus = () => {
           <img
             src="/arrow.png"
             alt="Down Arrow"
-            className="w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5 lg:w-6 lg:h-6 2xl:w-5 2xl:h-5 rotate-180"
+            className="w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5 lg:w-6 lg:h-6 2xl:w-5 2xl:h-5 rotate-180 lg:translate-y-3"
           />
           <a
             href="https://www.facebook.com/profile.php?id=61557983775555"
@@ -263,7 +263,7 @@ const Aboutus = () => {
             <img
               src="/follownow_icons/facebook.png"
               alt="Facebook"
-              className="w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5 lg:w-6 lg:h-6 2xl:w-5 2xl:h-5 hover:opacity-80 transition-opacity"
+              className="w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5 lg:w-6 lg:h-6 2xl:w-5 2xl:h-5 hover:opacity-80 transition-opacity lg:translate-y-4"
             />
           </a>
           <a
@@ -275,7 +275,7 @@ const Aboutus = () => {
             <img
               src="/follownow_icons/instagram.png"
               alt="Instagram"
-              className="w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5 lg:w-6 lg:h-6 2xl:w-5 2xl:h-5 hover:opacity-80 transition-opacity"
+              className="w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5 lg:w-6 lg:h-6 2xl:w-5 2xl:h-5 hover:opacity-80 transition-opacity lg:translate-y-4"
             />
           </a>
           <a
@@ -287,7 +287,7 @@ const Aboutus = () => {
             <img
               src="/follownow_icons/youtube.png"
               alt="YouTube"
-              className="w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5 lg:w-6 lg:h-6 2xl:w-5 2xl:h-5 hover:opacity-80 transition-opacity"
+              className="w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5 lg:w-6 lg:h-6 2xl:w-5 2xl:h-5 hover:opacity-80 transition-opacity lg:translate-y-4"
             />
           </a>
           <a
@@ -299,7 +299,7 @@ const Aboutus = () => {
             <img
               src="/follownow_icons/linkedin.png"
               alt="LinkedIn"
-              className="w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5 lg:w-6 lg:h-6 2xl:w-5 2xl:h-5 hover:opacity-80 transition-opacity"
+              className="w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5 lg:w-6 lg:h-6 2xl:w-5 2xl:h-5 hover:opacity-80 transition-opacity lg:translate-y-4"
             />
           </a>
         </div>
