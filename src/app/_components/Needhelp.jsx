@@ -14,7 +14,7 @@ const Needhelp = () => {
         }}
       ></div>
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center justify-center min-h-[300px]">
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center justify-center mt-[-45px] min-h-[300px]">
         <div className="text-white mb-8 text-center">
           <h1 className="font-gucina text-4xl sm:text-4xl md:text-6xl lg:text-6xl font-bold mb-4 whitespace-nowrap">
             Need Help?
