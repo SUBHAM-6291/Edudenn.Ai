@@ -95,18 +95,18 @@ const Placements = () => {
 
   return (
     <div className="w-full bg-black bg-opacity-80 mb-8 sm:mb-12 watch:mb-4 relative">
-      <div className="w-full max-w-[1280px] mx-auto relative">
-        <div className="flex flex-col lg:flex-row gap-8 lg:gap-10 xl:gap-12 2xl:gap-16 watch:gap-6 relative z-0 items-start justify-between">
+      <div className="w-full max-w-[1240px] mx-auto relative">
+        <div className="flex flex-col lg:flex-row gap-8 lg:gap-10 xl:gap-12 2xl:gap-12 watch:gap-6 relative z-0 items-start justify-between">
           {/* Left Section */}
-          <div className="w-full lg:w-[55%] xl:w-[55%] 2xl:w-[55%] bg-black bg-opacity-100 p-6 sm:p-8 watch:p-4 rounded-md min-h-[200px] max-h-[354px] 2xl:h-[354px] flex flex-col justify-between">
-            <h2 className="text-white text-3xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-5.5xl 2xl:text-6xl watch:text-2xl font-extrabold font-gucina text-center sm:text-left md:text-center lg:text-left">
+          <div className="w-full lg:w-[55%] xl:w-[55%] 2xl:w-[58%] bg-black bg-opacity-100 p-6 sm:p-8 watch:p-4 rounded-md min-h-[200px] max-h-[354px] 2xl:h-[340px] flex flex-col justify-between">
+            <h2 className="text-white text-3xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-5.5xl 2xl:text-5.5xl watch:text-2xl font-extrabold font-gucina text-center sm:text-left md:text-center lg:text-left">
               Our Student <br />
               <span className="relative group inline-block">
                 Placements
                 <span className="block h-1 w-0 group-hover:w-full bg-yellow-400 transition-all duration-500 mt-1 sm:mt-[0.5rem] watch:mt-0.5"></span>
               </span>
             </h2>
-            <p className="text-white text-sm sm:text-base md:text-lg watch:text-xs font-light max-w-full  pr-0 max-h-[200px] sm:max-h-[250px] 2xl:max-h-[300px] watch:max-h-[150px] text-center sm:text-left md:text-center lg:text-left xl:text-left 2xl:text-left">
+            <p className="text-white text-sm sm:text-base md:text-lg watch:text-xs font-light max-w-full pr-0 max-h-[200px] sm:max-h-[250px] 2xl:max-h-[280px] watch:max-h-[150px] text-center sm:text-left md:text-center lg:text-left xl:text-left 2xl:text-left">
               Well, because we’re not your grandma’s boring old school! At Edu-Den, we’re the rebels of education,
               the mavericks of learning, and the champions of fun-filled knowledge. We’ll teach you how to slay
               dragons and code websites, all while cracking jokes and sipping on virtual coffee. So, why settle
@@ -116,11 +116,11 @@ const Placements = () => {
           </div>
 
           {/* Right Section with Strong Left & Right Shadow */}
-          <div className="w-full lg:w-[45%] xl:w-[45%] 2xl:w-[45%] bg-black/50 rounded-md p-6 sm:p-8 watch:p-4 min-h-[300px] max-h-[354px] 2xl:h-[354px] relative overflow-hidden">
+          <div className="w-full lg:w-[45%] xl:w-[45%] 2xl:w-[42%] bg-black/50 rounded-md p-6 sm:p-8 watch:p-4 min-h-[300px] max-h-[354px] 2xl:h-[340px] relative overflow-hidden">
             {/* Wider Left Shadow */}
-            <div className="absolute top-0 left-0 h-full w-16 sm:w-24 lg:w-[20rem] watch:w-12 bg-gradient-to-r from-black to-transparent z-20 pointer-events-none" />
+            <div className="absolute top-0 left-0 h-full w-16 sm:w-24 lg:w-[20rem] 2xl:w-[18rem] watch:w-12 bg-gradient-to-r from-black to-transparent z-20 pointer-events-none" />
             {/* Wider Right Shadow */}
-            <div className="absolute top-0 right-0 h-full w-16 sm:w-24 lg:w-[20rem] watch:w-12 bg-gradient-to-l from-black to-transparent z-20 pointer-events-none" />
+            <div className="absolute top-0 right-0 h-full w-16 sm:w-24 lg:w-[20rem] 2xl:w-[18rem] watch:w-12 bg-gradient-to-l from-black to-transparent z-20 pointer-events-none" />
 
             <div className="relative space-y-3 sm:space-y-4 watch:space-y-2 h-full flex flex-col justify-between">
               {imageRows.map((row, rowIdx) => (

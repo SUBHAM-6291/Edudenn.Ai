@@ -229,7 +229,7 @@ const Aboutus = () => {
 
         <div
           ref={socialRef}
-          className="hidden sm:flex absolute top-8 sm:top-10 md:top-12 lg:top-14 2xl:top-14 right-[10%] sm:right-[8%] md:right-[6%] lg:right-[5%] 2xl:right-[5%] flex-col justify-start items-center bg-yellow-400 rounded-full p-2 sm:p-3 md:p-3 lg:p-3 2xl:p-2.5 gap-2 sm:gap-3 md:gap-4 lg:gap-4 2xl:gap-3 w-10 sm:w-11 md:w-12 lg:w-14 2xl:w-14 h-auto min-h-[160px] sm:min-h-[200px] md:min-h-[240px] lg:min-h-[280px] 2xl:min-h-[260px] border border-yellow-400 z-10"
+          className="hidden sm:flex absolute top-8 sm:top-10 md:top-12 lg:top-14 2xl:top-16 right-[10%] sm:right-[8%] md:right-[6%] lg:right-[5%] 2xl:right-[8%] flex-col justify-start items-center bg-yellow-400 rounded-full p-2 sm:p-3 md:p-3 lg:p-3 2xl:p-4 gap-2 sm:gap-3 md:gap-4 lg:gap-4 2xl:gap-5 w-10 sm:w-11 md:w-12 lg:w-14 2xl:w-16 h-auto min-h-[160px] sm:min-h-[200px] md:min-h-[240px] lg:min-h-[280px] 2xl:min-h-[300px] border border-yellow-400 z-10"
           aria-label="Follow Us Social Links"
         >
           <div
@@ -252,7 +252,7 @@ const Aboutus = () => {
           <img
             src="/arrow.png"
             alt="Down Arrow"
-            className="w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5 lg:w-6 lg:h-6 2xl:w-6 2xl:h-6 rotate-180"
+            className="w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5 lg:w-6 lg:h-6 2xl:w-5 2xl:h-5 rotate-180"
           />
           <a
             href="https://www.facebook.com/profile.php?id=61557983775555"
@@ -263,7 +263,7 @@ const Aboutus = () => {
             <img
               src="/follownow_icons/facebook.png"
               alt="Facebook"
-              className="w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5 lg:w-6 lg:h-6 2xl:w-6 2xl:h-6 hover:opacity-80 transition-opacity"
+              className="w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5 lg:w-6 lg:h-6 2xl:w-5 2xl:h-5 hover:opacity-80 transition-opacity"
             />
           </a>
           <a
@@ -275,7 +275,7 @@ const Aboutus = () => {
             <img
               src="/follownow_icons/instagram.png"
               alt="Instagram"
-              className="w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5 lg:w-6 lg:h-6 2xl:w-6 2xl:h-6 hover:opacity-80 transition-opacity"
+              className="w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5 lg:w-6 lg:h-6 2xl:w-5 2xl:h-5 hover:opacity-80 transition-opacity"
             />
           </a>
           <a
@@ -287,7 +287,7 @@ const Aboutus = () => {
             <img
               src="/follownow_icons/youtube.png"
               alt="YouTube"
-              className="w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5 lg:w-6 lg:h-6 2xl:w-6 2xl:h-6 hover:opacity-80 transition-opacity"
+              className="w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5 lg:w-6 lg:h-6 2xl:w-5 2xl:h-5 hover:opacity-80 transition-opacity"
             />
           </a>
           <a
@@ -299,7 +299,7 @@ const Aboutus = () => {
             <img
               src="/follownow_icons/linkedin.png"
               alt="LinkedIn"
-              className="w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5 lg:w-6 lg:h-6 2xl:w-6 2xl:h-6 hover:opacity-80 transition-opacity"
+              className="w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5 lg:w-6 lg:h-6 2xl:w-5 2xl:h-5 hover:opacity-80 transition-opacity"
             />
           </a>
         </div>

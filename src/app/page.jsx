@@ -21,30 +21,18 @@ const Page = () => {
     <div className="bg-black">
       <div
         className="
-          flex
-          flex-col
-          items-center
-          py-4
-          sm:py-8
-          px-4
-          sm:px-6
-          md:px-8
-          lg:px-10
-          xl:px-12
-          2xl:px-12  /* Reduced padding for consistency */
-          watch:px-2
-          w-full
-          mx-auto  /* Ensure centering */
+          flex flex-col items-center
+          py-4 sm:py-8
+          px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 2xl:px-12 watch:px-2
+          w-full mx-auto
         "
       >
         <div
           className="
             w-full
             max-w-[1280px]
-            mx-auto  /* Explicitly center content */
-            space-y-8
-            sm:space-y-12
-            watch:space-y-4
+            mx-auto
+            space-y-8 sm:space-y-12 watch:space-y-4
             text-center sm:text-left
           "
         >
@@ -54,13 +42,35 @@ const Page = () => {
           <Course_categorys />
           <Placements />
           <Allcourse />
-          <Video />
+        </div>
+      </div>
+
+      {/* 🟡 VIDEO OUTSIDE max-width WRAPPER */}
+      <Video />
+
+      <div
+        className="
+          flex flex-col items-center
+          px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 2xl:px-12 watch:px-2
+          w-full mx-auto
+        "
+      >
+        <div
+          className="
+            w-full
+            max-w-[1280px]
+            mx-auto
+            space-y-8 sm:space-y-12 watch:space-y-4
+            text-center sm:text-left
+          "
+        >
           <OurCollaboration />
           <Upcomingevents />
           <Needhelp />
           <FAQ />
         </div>
       </div>
+
       <Clan />
       <Testimonial />
       <Footer />

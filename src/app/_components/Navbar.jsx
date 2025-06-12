@@ -31,7 +31,8 @@ const Navbar = () => {
         className="
           max-w-7xl 2xl:max-w-[1440px] mx-auto 
           flex items-center justify-between 
-          py-3 sm:py-4 md:py-5 lg:py-6 xl:py-6 2xl:py-7 
+          py-0.5 sm:py-1 md:py-1 lg:py-1 xl:py-0.5 2xl:py-1
+
           px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 2xl:px-14
         "
       >
@@ -100,25 +101,25 @@ const Navbar = () => {
               <div className="absolute left-0 mt-2 w-40 sm:w-44 md:w-48 bg-black text-white border border-[#FFD700] rounded-lg shadow-lg z-50 transition-all duration-500">
                 <Link
                   href="#"
-                  className="block px-4 py-2 hover:bg-[#FFD700] hover:text-black transition-colors duration-500 text-sm"
+                  className="block px-4 py-1.5 hover:bg-[#FFD700] hover:text-black transition-colors duration-500 text-sm"
                 >
                   Web Development
                 </Link>
                 <Link
                   href="#"
-                  className="block px-4 py-2 hover:bg-[#FFD700] hover:text-black transition-colors duration-500 text-sm"
+                  className="block px-4 py-1.5 hover:bg-[#FFD700] hover:text-black transition-colors duration-500 text-sm"
                 >
                   Data Science
                 </Link>
                 <Link
                   href="#"
-                  className="block px-4 py-2 hover:bg-[#FFD700] hover:text-black transition-colors duration-500 text-sm"
+                  className="block px-4 py-1.5 hover:bg-[#FFD700] hover:text-black transition-colors duration-500 text-sm"
                 >
                   Graphic Design
                 </Link>
                 <Link
                   href="#"
-                  className="block px-4 py-2 hover:bg-[#FFD700] hover:text-black transition-colors duration-500 text-sm"
+                  className="block px-4 py-1.5 hover:bg-[#FFD700] hover:text-black transition-colors duration-500 text-sm"
                 >
                   Digital Marketing
                 </Link>
@@ -150,19 +151,19 @@ const Navbar = () => {
               <div className="absolute left-0 mt-2 w-40 sm:w-44 md:w-48 bg-black text-white border border-[#FFD700] rounded-lg shadow-lg z-50 transition-all duration-500">
                 <Link
                   href="#"
-                  className="block px-4 py-2 hover:bg-[#FFD700] hover:text-black transition-colors duration-500 text-sm"
+                  className="block px-4 py-1.5 hover:bg-[#FFD700] hover:text-black transition-colors duration-500 text-sm"
                 >
                   New Courses
                 </Link>
                 <Link
                   href="#"
-                  className="block px-4 py-2 hover:bg-[#FFD700] hover:text-black transition-colors duration-500 text-sm"
+                  className="block px-4 py-1.5 hover:bg-[#FFD700] hover:text-black transition-colors duration-500 text-sm"
                 >
                   Webinars
                 </Link>
                 <Link
                   href="#"
-                  className="block px-4 py-2 hover:bg-[#FFD700] hover:text-black transition-colors duration-500 text-sm"
+                  className="block px-4 py-1.5 hover:bg-[#FFD700] hover:text-black transition-colors duration-500 text-sm"
                 >
                   Blog Posts
                 </Link>
@@ -183,7 +184,7 @@ const Navbar = () => {
           <button
             className="
               border border-[#FFD700] rounded-full 
-              py-2 sm:py-2.5 md:py-3 px-6 sm:px-7 md:px-8 
+              py-1.5 sm:py-2 md:py-2.5 px-6 sm:px-7 md:px-8 
               bg-transparent hover:bg-[#FFD700] hover:text-black hover:shadow-lg 
               transition-all duration-500 ease-in-out text-sm xl:text-base
             "
@@ -198,19 +199,19 @@ const Navbar = () => {
         <div
           className="
             lg:hidden flex flex-col items-start w-full bg-black text-white 
-            space-y-3 py-5 px-4 sm:px-6 md:px-8 
+            space-y-2 py-3 px-4 sm:px-6 md:px-8 
             transition-all duration-500
           "
         >
           <Link
             href="#"
-            className="w-full text-left hover:bg-[#FFD700] hover:text-black rounded-lg px-4 py-2 transition-colors duration-300 text-sm sm:text-base"
+            className="w-full text-left hover:bg-[#FFD700] hover:text-black rounded-lg px-4 py-1.5 transition-colors duration-300 text-sm sm:text-base"
           >
             Home
           </Link>
           <Link
             href="#"
-            className="w-full text-left hover:bg-[#FFD700] hover:text-black rounded-lg px-4 py-2 transition-colors duration-300 text-sm sm:text-base"
+            className="w-full text-left hover:bg-[#FFD700] hover:text-black rounded-lg px-4 py-1.5 transition-colors duration-300 text-sm sm:text-base"
           >
             About Us
           </Link>
@@ -218,7 +219,7 @@ const Navbar = () => {
             <button
               className="
                 w-full text-left hover:bg-[#FFD700] hover:text-black rounded-lg 
-                px-4 py-2 transition-colors duration-300 flex items-center justify-between text-sm sm:text-base
+                px-4 py-1.5 transition-colors duration-300 flex items-center justify-between text-sm sm:text-base
               "
               onClick={toggleCourses}
             >
@@ -243,25 +244,25 @@ const Navbar = () => {
               <div className="w-full bg-black text-white rounded-lg shadow-lg mt-2">
                 <Link
                   href="#"
-                  className="block text-left px-6 sm:px-8 py-2 hover:bg-[#FFD700] hover:text-black rounded-lg transition-colors duration-300 text-sm sm:text-base"
+                  className="block text-left px-6 sm:px-8 py-1.5 hover:bg-[#FFD700] hover:text-black rounded-lg transition-colors duration-300 text-sm sm:text-base"
                 >
                   Web Development
                 </Link>
                 <Link
                   href="#"
-                  className="block text-left px-6 sm:px-8 py-2 hover:bg-[#FFD700] hover:text-black rounded-lg transition-colors duration-300 text-sm sm:text-base"
+                  className="block text-left px-6 sm:px-8 py-1.5 hover:bg-[#FFD700] hover:text-black rounded-lg transition-colors duration-300 text-sm sm:text-base"
                 >
                   Data Science
                 </Link>
                 <Link
                   href="#"
-                  className="block text-left px-6 sm:px-8 py-2 hover:bg-[#FFD700] hover:text-black rounded-lg transition-colors duration-300 text-sm sm:text-base"
+                  className="block text-left px-6 sm:px-8 py-1.5 hover:bg-[#FFD700] hover:text-black rounded-lg transition-colors duration-300 text-sm sm:text-base"
                 >
                   Graphic Design
                 </Link>
                 <Link
                   href="#"
-                  className="block text-left px-6 sm:px-8 py-2 hover:bg-[#FFD700] hover:text-black rounded-lg transition-colors duration-300 text-sm sm:text-base"
+                  className="block text-left px-6 sm:px-8 py-1.5 hover:bg-[#FFD700] hover:text-black rounded-lg transition-colors duration-300 text-sm sm:text-base"
                 >
                   Digital Marketing
                 </Link>
@@ -272,7 +273,7 @@ const Navbar = () => {
             <button
               className="
                 w-full text-left hover:bg-[#FFD700] hover:text-black rounded-lg 
-                px-4 py-2 transition-colors duration-300 flex items-center justify-between text-sm sm:text-base
+                px-4 py-1.5 transition-colors duration-300 flex items-center justify-between text-sm sm:text-base
               "
               onClick={toggleWhatsNew}
             >
@@ -297,19 +298,19 @@ const Navbar = () => {
               <div className="w-full bg-black text-white rounded-lg shadow-lg mt-2">
                 <Link
                   href="#"
-                  className="block text-left px-6 sm:px-8 py-2 hover:bg-[#FFD700] hover:text-black rounded-lg transition-colors duration-300 text-sm sm:text-base"
+                  className="block text-left px-6 sm:px-8 py-1.5 hover:bg-[#FFD700] hover:text-black rounded-lg transition-colors duration-300 text-sm sm:text-base"
                 >
                   New Courses
                 </Link>
                 <Link
                   href="#"
-                  className="block text-left px-6 sm:px-8 py-2 hover:bg-[#FFD700] hover:text-black rounded-lg transition-colors duration-300 text-sm sm:text-base"
+                  className="block text-left px-6 sm:px-8 py-1.5 hover:bg-[#FFD700] hover:text-black rounded-lg transition-colors duration-300 text-sm sm:text-base"
                 >
                   Webinars
                 </Link>
                 <Link
                   href="#"
-                  className="block text-left px-6 sm:px-8 py-2 hover:bg-[#FFD700] hover:text-black rounded-lg transition-colors duration-300 text-sm sm:text-base"
+                  className="block text-left px-6 sm:px-8 py-1.5 hover:bg-[#FFD700] hover:text-black rounded-lg transition-colors duration-300 text-sm sm:text-base"
                 >
                   Blog Posts
                 </Link>
@@ -318,20 +319,20 @@ const Navbar = () => {
           </div>
           <Link
             href="#"
-            className="w-full text-left hover:bg-[#FFD700] hover:text-black rounded-lg px-4 py-2 transition-colors duration-300 text-sm sm:text-base"
+            className="w-full text-left hover:bg-[#FFD700] hover:text-black rounded-lg px-4 py-1.5 transition-colors duration-300 text-sm sm:text-base"
           >
             Verify
           </Link>
           <Link
             href="#"
-            className="w-full text-left hover:bg-[#FFD700] hover:text-black rounded-lg px-4 py-2 transition-colors duration-300 text-sm sm:text-base"
+            className="w-full text-left hover:bg-[#FFD700] hover:text-black rounded-lg px-4 py-1.5 transition-colors duration-300 text-sm sm:text-base"
           >
             Contact Us
           </Link>
           <button
             className="
               w-full max-w-xs sm:max-w-sm border border-[#FFD700] rounded-full 
-              py-2.5 sm:py-3 px-6 sm:px-8 
+              py-2 sm:py-2.5 px-6 sm:px-8 
               bg-transparent hover:bg-[#FFD700] hover:text-black hover:shadow-lg 
               transition-all duration-500 ease-in-out text-sm sm:text-base
             "
