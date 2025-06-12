@@ -270,7 +270,7 @@ const Aboutus = () => {
             href="https://www.instagram.com/at_eduden/"
             target="_blank"
             rel="noopener"
-            aria-label="Follow EduDen on Instagram"
+            aria-label="Follow EduDen on Instagram."
           >
             <img
               src="/follownow_icons/instagram.png"
