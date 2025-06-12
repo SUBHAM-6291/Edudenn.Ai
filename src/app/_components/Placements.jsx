@@ -106,7 +106,7 @@ const Placements = () => {
                 <span className="block h-1 w-0 group-hover:w-full bg-yellow-400 transition-all duration-500 mt-1 sm:mt-[0.5rem] watch:mt-0.5"></span>
               </span>
             </h2>
-            <p className="text-white text-sm sm:text-base md:text-lg watch:text-xs font-light max-w-full overflow-y-auto pr-0 max-h-[200px] sm:max-h-[250px] 2xl:max-h-[300px] watch:max-h-[150px] text-center sm:text-left md:text-center lg:text-left xl:text-left 2xl:text-left">
+            <p className="text-white text-sm sm:text-base md:text-lg watch:text-xs font-light max-w-full  pr-0 max-h-[200px] sm:max-h-[250px] 2xl:max-h-[300px] watch:max-h-[150px] text-center sm:text-left md:text-center lg:text-left xl:text-left 2xl:text-left">
               Well, because we’re not your grandma’s boring old school! At Edu-Den, we’re the rebels of education,
               the mavericks of learning, and the champions of fun-filled knowledge. We’ll teach you how to slay
               dragons and code websites, all while cracking jokes and sipping on virtual coffee. So, why settle

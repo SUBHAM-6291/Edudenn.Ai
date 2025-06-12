@@ -85,8 +85,9 @@ const Testimonial = () => {
           flex
           items-center
           justify-center
-          min-h-[40vh] sm:min-h-[50vh] md:min-h-[60vh] lg:min-h-[70vh]
+          min-h-[40vh] sm:min-h-[50vh] md:min-h-[60vh] lg:min-h-[80vh] /* Increased min-height for padding */
           px-4 sm:px-6 md:px-8
+          py-8 sm:py-12 md:py-16 lg:py-20 /* Added top/bottom padding */
         "
       >
         <div className="absolute inset-0 bg-black/30" />
@@ -125,7 +126,7 @@ const Testimonial = () => {
                     <img
                       src="/66.QuoteRight.png"
                       alt="Quote"
-                      className="w-5 h-5 sm:w-6 sm:h-6 object-contain flex-shrink-0"
+                      className="w-8 h-8 sm:w-10 sm:h-10 object-contain flex-shrink-0" /* Increased size */
                       loading="lazy"
                     />
                     <div className="flex flex-col justify-between w-full relative">
@@ -147,7 +148,7 @@ const Testimonial = () => {
                         <img
                           src={testimonial.image}
                           alt={testimonial.name}
-                          className="w-8 h-8 sm:w-10 sm:h-10 rounded-full object-cover flex-shrink-0"
+                          className="w-12 h-12 sm:w-14 sm:h-14 rounded-full object-cover flex-shrink-0" /* Increased size */
                           loading="lazy"
                         />
                         <div>

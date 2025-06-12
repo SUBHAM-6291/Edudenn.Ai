@@ -156,7 +156,7 @@ const Aboutus = () => {
   };
 
   return (
-    <div className="bg-black flex justify-center pt-6 sm:pt-10 md:pt-12 lg:pt-4 xl:pt-2 2xl:pt-1 px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12">
+    <div className="bg-black flex justify-center px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12">
       <div className="w-full max-w-7xl h-[350px] sm:h-[400px] md:h-[450px] lg:h-[520px] rounded-2xl relative border-t-2 overflow-hidden">
         <Image
           ref={imageRef}
@@ -229,38 +229,78 @@ const Aboutus = () => {
 
         <div
           ref={socialRef}
-          className="hidden sm:flex absolute top-8 sm:top-10 md:top-12 lg:top-14 2xl:top-16 right-[10%] sm:right-[8%] md:right-[6%] lg:right-[5%] 2xl:right-[200px] flex-col justify-start items-center bg-yellow-400 rounded-full p-2 sm:p-3 gap-2 sm:gap-3 md:gap-4 w-10 sm:w-11 md:w-12 lg:w-13 2xl:w-[46px] h-auto min-h-[160px] sm:min-h-[200px] md:min-h-[240px] lg:min-h-[280px] 2xl:min-h-[306px] border border-yellow-400 z-10"
+          className="hidden sm:flex absolute top-8 sm:top-10 md:top-12 lg:top-14 2xl:top-14 right-[10%] sm:right-[8%] md:right-[6%] lg:right-[5%] 2xl:right-[5%] flex-col justify-start items-center bg-yellow-400 rounded-full p-2 sm:p-3 md:p-3 lg:p-3 2xl:p-2.5 gap-2 sm:gap-3 md:gap-4 lg:gap-4 2xl:gap-3 w-10 sm:w-11 md:w-12 lg:w-14 2xl:w-14 h-auto min-h-[160px] sm:min-h-[200px] md:min-h-[240px] lg:min-h-[280px] 2xl:min-h-[260px] border border-yellow-400 z-10"
           aria-label="Follow Us Social Links"
         >
           <div
             className={`
               flex items-center justify-center w-full
-              h-6 sm:h-8 md:h-10 lg:h-12 2xl:h-14
+              h-6 sm:h-8 md:h-10 lg:h-12 2xl:h-10
               ${isSmallScreen ? "bg-transparent" : "bg-yellow-400"}
             `}
           >
             <span
               className={`
                 text-black font-semibold
-                text-[8px] sm:text-[10px] md:text-xs lg:text-sm 2xl:text-base
+                text-[8px] sm:text-[10px] md:text-xs lg:text-sm 2xl:text-sm
                 transform rotate-90 origin-center whitespace-nowrap
               `}
             >
               Follow now
             </span>
           </div>
-          <img src="/arrow.png" alt="Down Arrow" className="w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5 lg:w-6 lg:h-6 2xl:w-7 2xl:h-7 rotate-180" />
-          <a href="https://www.facebook.com/profile.php?id=61557983775555" target="_blank" rel="noopener noreferrer" aria-label="Follow EduDen on Facebook">
-            <img src="/follownow_icons/facebook.png" alt="Facebook" className="w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5 lg:w-6 lg:h-6 2xl:w-7 2xl:h-7 hover:opacity-80 transition-opacity" />
+          <img
+            src="/arrow.png"
+            alt="Down Arrow"
+            className="w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5 lg:w-6 lg:h-6 2xl:w-6 2xl:h-6 rotate-180"
+          />
+          <a
+            href="https://www.facebook.com/profile.php?id=61557983775555"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Follow EduDen on Facebook"
+          >
+            <img
+              src="/follownow_icons/facebook.png"
+              alt="Facebook"
+              className="w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5 lg:w-6 lg:h-6 2xl:w-6 2xl:h-6 hover:opacity-80 transition-opacity"
+            />
           </a>
-          <a href="https://www.instagram.com/at_eduden/" target="_blank" rel="noopener" aria-label="Follow EduDen on Instagram">
-            <img src="/follownow_icons/instagram.png" alt="Instagram" className="w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5 lg:w-6 lg:h-6 2xl:w-7 2xl:h-7 hover:opacity-80 transition-opacity" />
+          <a
+            href="https://www.instagram.com/at_eduden/"
+            target="_blank"
+            rel="noopener"
+            aria-label="Follow EduDen on Instagram"
+          >
+            <img
+              src="/follownow_icons/instagram.png"
+              alt="Instagram"
+              className="w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5 lg:w-6 lg:h-6 2xl:w-6 2xl:h-6 hover:opacity-80 transition-opacity"
+            />
           </a>
-          <a href="https://youtu.be/r8pDXO6zRUg?si=mJzIfCuuf2lVr7Y4" target="_blank" rel="noopener noreferrer" aria-label="Follow EduDen on YouTube">
-            <img src="/follownow_icons/youtube.png" alt="YouTube" className="w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5 lg:w-6 lg:h-6 2xl:w-7 2xl:h-7 hover:opacity-80 transition-opacity" />
+          <a
+            href="https://youtu.be/r8pDXO6zRUg?si=mJzIfCuuf2lVr7Y4"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Follow EduDen on YouTube"
+          >
+            <img
+              src="/follownow_icons/youtube.png"
+              alt="YouTube"
+              className="w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5 lg:w-6 lg:h-6 2xl:w-6 2xl:h-6 hover:opacity-80 transition-opacity"
+            />
           </a>
-          <a href="https://www.linkedin.com/company/edu-den/" target="_blank" rel="noopener noreferrer" aria-label="Follow EduDen on LinkedIn">
-            <img src="/follownow_icons/linkedin.png" alt="LinkedIn" className="w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5 lg:w-6 lg:h-6 2xl:w-7 2xl:h-7 hover:opacity-80 transition-opacity" />
+          <a
+            href="https://www.linkedin.com/company/edu-den/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Follow EduDen on LinkedIn"
+          >
+            <img
+              src="/follownow_icons/linkedin.png"
+              alt="LinkedIn"
+              className="w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5 lg:w-6 lg:h-6 2xl:w-6 2xl:h-6 hover:opacity-80 transition-opacity"
+            />
           </a>
         </div>
 

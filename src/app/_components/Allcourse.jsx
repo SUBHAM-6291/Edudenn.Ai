@@ -142,7 +142,7 @@ const Allcourse = () => {
                         sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33.33vw"
                       />
                     </div>
-                    <div className="absolute right-2 top-1/2 -translate-y-1/2 bg-yellow-400 rounded-full w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 lg:w-18 lg:h-18 2xl:w-[102.12608337402344px] 2xl:h-[102.12608337402344px] flex items-center justify-center text-black font-bold text-xs sm:text-sm md:text-base lg:text-lg 2xl:text-xl z-10 group-hover:opacity-0 transition-opacity duration-300">
+                    <div className="absolute right-2 top-1/2 -translate-y-1/2 bg-yellow-400 rounded-full w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 lg:w-16 lg:h-16  2xl:w-[60.12608337402344px] 2xl:h-[60.12608337402344px] flex items-center justify-center text-black font-bold text-xs sm:text-sm md:text-base lg:text-lg 2xl:text-xl z-10 group-hover:opacity-0 transition-opacity duration-300">
                       ${course.price}
                     </div>
                     <div className="relative z-0 flex flex-col justify-start h-[calc(50%-4rem)] p-4 sm:p-5 md:p-6 text-black">
@@ -154,7 +154,7 @@ const Allcourse = () => {
                           {[...Array(5)].map((_, i) => (
                             <svg
                               key={i}
-                              className="w-3.5 h-3.5 sm:w-4 sm:h-4 md:w-4.5 md:h-4.5 lg:w-5 lg:h-5 text-yellow-400 fill-current"
+                              className="w-3.5 h-3.5 sm:w-4 sm:h-4 md:w-4.5 md:h-4.5 lg:w-4 lg:h-4 text-yellow-400 fill-current"
                               viewBox="0 0 24 24"
                             >
                               <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />

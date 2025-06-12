@@ -25,26 +25,34 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`top-0 left-0 w-full z-50 font-gucina transition-colors duration-500 bg-black text-white`}
+      className="top-0 left-0 w-full z-50 font-gucina transition-colors duration-500 bg-black text-white"
     >
-      <div className="max-w-7xl mx-auto flex items-center justify-between py-4 px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12">
-        {/* Adjusted logo size for sm and md devices */}
-        <div className="flex-shrink-0 w-36 sm:w-44 md:w-48 lg:w-48 xl:w-52">
+      <div
+        className="
+          max-w-7xl 2xl:max-w-[1440px] mx-auto 
+          flex items-center justify-between 
+          py-3 sm:py-4 md:py-5 lg:py-6 xl:py-6 2xl:py-7 
+          px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 2xl:px-14
+        "
+      >
+        {/* Logo */}
+        <div className="flex-shrink-0 w-32 sm:w-40 md:w-44 lg:w-48 xl:w-52 2xl:w-56">
           <img
             src="/eduden.png"
             alt="EduDen Logo"
             className="object-contain w-full h-auto"
+            loading="lazy"
           />
         </div>
 
-        {/* Increased hamburger icon size for sm and md */}
+        {/* Hamburger Menu */}
         <button
           className="lg:hidden focus:outline-none text-white transition-colors duration-500"
           onClick={toggleMenu}
           aria-label="Toggle navigation menu"
         >
           <svg
-            className="w-9 h-9 sm:w-10 sm:h-10 md:w-11 md:h-11 text-[#FFD700]" // Larger icon for sm and md
+            className="w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 text-[#FFD700]"
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
@@ -59,17 +67,18 @@ const Navbar = () => {
           </svg>
         </button>
 
-        <div className="hidden lg:flex lg:items-center lg:space-x-4 xl:space-x-6">
-          <Link href="#" className="hover:text-[#FFD700] transition-colors duration-500">
+        {/* Desktop Menu */}
+        <div className="hidden lg:flex lg:items-center lg:space-x-3 xl:space-x-5 2xl:space-x-6">
+          <Link href="#" className="hover:text-[#FFD700] transition-colors duration-500 text-sm xl:text-base">
             Home
           </Link>
-          <Link href="#" className="hover:text-[#FFD700] transition-colors duration-500">
+          <Link href="#" className="hover:text-[#FFD700] transition-colors duration-500 text-sm xl:text-base">
             About Us
           </Link>
 
           <div className="relative">
             <button
-              className="hover:text-[#FFD700] transition-colors duration-500 flex items-center"
+              className="hover:text-[#FFD700] transition-colors duration-500 flex items-center text-sm xl:text-base"
               onClick={toggleCourses}
               onMouseEnter={() => setIsCoursesOpen(true)}
               onMouseLeave={() => setIsCoursesOpen(false)}
@@ -77,43 +86,39 @@ const Navbar = () => {
               Courses
               <span className="ml-1">
                 <svg
-                  className="w-5 h-5 hover:text-[#FFD700] transition-colors duration-500"
+                  className="w-4 h-4 xl:w-5 xl:h-5 hover:text-[#FFD700] transition-colors duration-500"
                   fill="none"
                   stroke="currentColor"
                   strokeWidth="2"
                   viewBox="0 0 24 24"
                 >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="m19 9-7 7-7-7"
-                  />
+                  <path strokeLinecap="round" strokeLinejoin="round" d="m19 9-7 7-7-7" />
                 </svg>
               </span>
             </button>
             {isCoursesOpen && (
-              <div className="absolute left-0 mt-2 w-48 bg-black text-white border border-[#FFD700] rounded-lg shadow-lg z-50 transition-all duration-500">
+              <div className="absolute left-0 mt-2 w-40 sm:w-44 md:w-48 bg-black text-white border border-[#FFD700] rounded-lg shadow-lg z-50 transition-all duration-500">
                 <Link
                   href="#"
-                  className="block px-4 py-2 hover:bg-[#FFD700] hover:text-black transition-colors duration-500"
+                  className="block px-4 py-2 hover:bg-[#FFD700] hover:text-black transition-colors duration-500 text-sm"
                 >
                   Web Development
                 </Link>
                 <Link
                   href="#"
-                  className="block px-4 py-2 hover:bg-[#FFD700] hover:text-black transition-colors duration-500"
+                  className="block px-4 py-2 hover:bg-[#FFD700] hover:text-black transition-colors duration-500 text-sm"
                 >
                   Data Science
                 </Link>
                 <Link
                   href="#"
-                  className="block px-4 py-2 hover:bg-[#FFD700] hover:text-black transition-colors duration-500"
+                  className="block px-4 py-2 hover:bg-[#FFD700] hover:text-black transition-colors duration-500 text-sm"
                 >
                   Graphic Design
                 </Link>
                 <Link
                   href="#"
-                  className="block px-4 py-2 hover:bg-[#FFD700] hover:text-black transition-colors duration-500"
+                  className="block px-4 py-2 hover:bg-[#FFD700] hover:text-black transition-colors duration-500 text-sm"
                 >
                   Digital Marketing
                 </Link>
@@ -123,7 +128,7 @@ const Navbar = () => {
 
           <div className="relative">
             <button
-              className="hover:text-[#FFD700] transition-colors duration-500 flex items-start"
+              className="hover:text-[#FFD700] transition-colors duration-500 flex items-center text-sm xl:text-base"
               onClick={toggleWhatsNew}
               onMouseEnter={() => setIsWhatsNewOpen(true)}
               onMouseLeave={() => setIsWhatsNewOpen(false)}
@@ -131,37 +136,33 @@ const Navbar = () => {
               What's New
               <span className="ml-1">
                 <svg
-                  className="w-5 h-5 hover:text-[#FFD700] transition-colors duration-500"
+                  className="w-4 h-4 xl:w-5 xl:h-5 hover:text-[#FFD700] transition-colors duration-500"
                   fill="none"
                   stroke="currentColor"
                   strokeWidth="2"
                   viewBox="0 0 24 24"
                 >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="m19 9-7 7-7-7"
-                  />
+                  <path strokeLinecap="round" strokeLinejoin="round" d="m19 9-7 7-7-7" />
                 </svg>
               </span>
             </button>
             {isWhatsNewOpen && (
-              <div className="absolute left-0 mt-2 w-48 bg-black text-white border border-[#FFD700] rounded-lg shadow-lg z-50 transition-all duration-500">
+              <div className="absolute left-0 mt-2 w-40 sm:w-44 md:w-48 bg-black text-white border border-[#FFD700] rounded-lg shadow-lg z-50 transition-all duration-500">
                 <Link
                   href="#"
-                  className="block px-4 py-2 hover:bg-[#FFD700] hover:text-black transition-colors duration-500"
+                  className="block px-4 py-2 hover:bg-[#FFD700] hover:text-black transition-colors duration-500 text-sm"
                 >
                   New Courses
                 </Link>
                 <Link
                   href="#"
-                  className="block px-4 py-2 hover:bg-[#FFD700] hover:text-black transition-colors duration-500"
+                  className="block px-4 py-2 hover:bg-[#FFD700] hover:text-black transition-colors duration-500 text-sm"
                 >
                   Webinars
                 </Link>
                 <Link
                   href="#"
-                  className="block px-4 py-2 hover:bg-[#FFD700] hover:text-black transition-colors duration-500"
+                  className="block px-4 py-2 hover:bg-[#FFD700] hover:text-black transition-colors duration-500 text-sm"
                 >
                   Blog Posts
                 </Link>
@@ -169,38 +170,56 @@ const Navbar = () => {
             )}
           </div>
 
-          <Link href="#" className="hover:text-[#FFD700] transition-colors duration-500">
+          <Link href="#" className="hover:text-[#FFD700] transition-colors duration-500 text-sm xl:text-base">
             Verify
           </Link>
-          <Link href="#" className="hover:text-[#FFD700] transition-colors duration-500">
+          <Link href="#" className="hover:text-[#FFD700] transition-colors duration-500 text-sm xl:text-base">
             Contact Us
           </Link>
         </div>
 
+        {/* Enroll Now Button (Desktop) */}
         <div className="hidden lg:flex items-center">
-          <button className="border border-[#FFD700] rounded-full py-3 px-8 bg-transparent hover:bg-[#FFD700] hover:text-black hover:shadow-lg transition-all duration-700 ease-in-out">
+          <button
+            className="
+              border border-[#FFD700] rounded-full 
+              py-2 sm:py-2.5 md:py-3 px-6 sm:px-7 md:px-8 
+              bg-transparent hover:bg-[#FFD700] hover:text-black hover:shadow-lg 
+              transition-all duration-500 ease-in-out text-sm xl:text-base
+            "
+          >
             Enroll Now
           </button>
         </div>
       </div>
 
+      {/* Mobile Menu */}
       {isMenuOpen && (
-        <div className="lg:hidden flex flex-col items-start w-full bg-black text-white space-y-4 py-6 px-4 sm:px-6 md:px-8 transition-all duration-500">
+        <div
+          className="
+            lg:hidden flex flex-col items-start w-full bg-black text-white 
+            space-y-3 py-5 px-4 sm:px-6 md:px-8 
+            transition-all duration-500
+          "
+        >
           <Link
             href="#"
-            className="w-full text-left hover:bg-[#FFD700] hover:text-black rounded-lg px-4 py-2 transition-colors duration-300"
+            className="w-full text-left hover:bg-[#FFD700] hover:text-black rounded-lg px-4 py-2 transition-colors duration-300 text-sm sm:text-base"
           >
             Home
           </Link>
           <Link
             href="#"
-            className="w-full text-left hover:bg-[#FFD700] hover:text-black rounded-lg px-4 py-2 transition-colors duration-300"
+            className="w-full text-left hover:bg-[#FFD700] hover:text-black rounded-lg px-4 py-2 transition-colors duration-300 text-sm sm:text-base"
           >
             About Us
           </Link>
           <div className="w-full">
             <button
-              className="w-full text-left hover:bg-[#FFD700] hover:text-black rounded-lg px-4 py-2 transition-colors duration-300 flex items-center justify-between"
+              className="
+                w-full text-left hover:bg-[#FFD700] hover:text-black rounded-lg 
+                px-4 py-2 transition-colors duration-300 flex items-center justify-between text-sm sm:text-base
+              "
               onClick={toggleCourses}
             >
               Courses
@@ -218,31 +237,31 @@ const Navbar = () => {
             </button>
             <div
               className={`overflow-hidden transition-all duration-300 ease-in-out ${
-                isCoursesOpen ? 'max-h-[400px] opacity-100' : 'max-h-0 opacity-0'
+                isCoursesOpen ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0'
               }`}
             >
               <div className="w-full bg-black text-white rounded-lg shadow-lg mt-2">
                 <Link
                   href="#"
-                  className="block text-left px-8 py-2 hover:bg-[#FFD700] hover:text-black rounded-lg transition-colors duration-300"
+                  className="block text-left px-6 sm:px-8 py-2 hover:bg-[#FFD700] hover:text-black rounded-lg transition-colors duration-300 text-sm sm:text-base"
                 >
                   Web Development
                 </Link>
                 <Link
                   href="#"
-                  className="block text-left px-8 py-2 hover:bg-[#FFD700] hover:text-black rounded-lg transition-colors duration-300"
+                  className="block text-left px-6 sm:px-8 py-2 hover:bg-[#FFD700] hover:text-black rounded-lg transition-colors duration-300 text-sm sm:text-base"
                 >
                   Data Science
                 </Link>
                 <Link
                   href="#"
-                  className="block text-left px-8 py-2 hover:bg-[#FFD700] hover:text-black rounded-lg transition-colors duration-300"
+                  className="block text-left px-6 sm:px-8 py-2 hover:bg-[#FFD700] hover:text-black rounded-lg transition-colors duration-300 text-sm sm:text-base"
                 >
                   Graphic Design
                 </Link>
                 <Link
                   href="#"
-                  className="block text-left px-8 py-2 hover:bg-[#FFD700] hover:text-black rounded-lg transition-colors duration-300"
+                  className="block text-left px-6 sm:px-8 py-2 hover:bg-[#FFD700] hover:text-black rounded-lg transition-colors duration-300 text-sm sm:text-base"
                 >
                   Digital Marketing
                 </Link>
@@ -251,7 +270,10 @@ const Navbar = () => {
           </div>
           <div className="w-full">
             <button
-              className="w-full text-left hover:bg-[#FFD700] hover:text-black rounded-lg px-4 py-2 transition-colors duration-300 flex items-center justify-between"
+              className="
+                w-full text-left hover:bg-[#FFD700] hover:text-black rounded-lg 
+                px-4 py-2 transition-colors duration-300 flex items-center justify-between text-sm sm:text-base
+              "
               onClick={toggleWhatsNew}
             >
               What's New
@@ -269,25 +291,25 @@ const Navbar = () => {
             </button>
             <div
               className={`overflow-hidden transition-all duration-300 ease-in-out ${
-                isWhatsNewOpen ? 'max-h-[400px] opacity-100' : 'max-h-0 opacity-0'
+                isWhatsNewOpen ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0'
               }`}
             >
               <div className="w-full bg-black text-white rounded-lg shadow-lg mt-2">
                 <Link
                   href="#"
-                  className="block text-left px-8 py-2 hover:bg-[#FFD700] hover:text-black rounded-lg transition-colors duration-300"
+                  className="block text-left px-6 sm:px-8 py-2 hover:bg-[#FFD700] hover:text-black rounded-lg transition-colors duration-300 text-sm sm:text-base"
                 >
                   New Courses
                 </Link>
                 <Link
                   href="#"
-                  className="block text-left px-8 py-2 hover:bg-[#FFD700] hover:text-black rounded-lg transition-colors duration-300"
+                  className="block text-left px-6 sm:px-8 py-2 hover:bg-[#FFD700] hover:text-black rounded-lg transition-colors duration-300 text-sm sm:text-base"
                 >
                   Webinars
                 </Link>
                 <Link
                   href="#"
-                  className="block text-left px-8 py-2 hover:bg-[#FFD700] hover:text-black rounded-lg transition-colors duration-300"
+                  className="block text-left px-6 sm:px-8 py-2 hover:bg-[#FFD700] hover:text-black rounded-lg transition-colors duration-300 text-sm sm:text-base"
                 >
                   Blog Posts
                 </Link>
@@ -296,18 +318,23 @@ const Navbar = () => {
           </div>
           <Link
             href="#"
-            className="w-full text-left hover:bg-[#FFD700] hover:text-black rounded-lg px-4 py-2 transition-colors duration-300"
+            className="w-full text-left hover:bg-[#FFD700] hover:text-black rounded-lg px-4 py-2 transition-colors duration-300 text-sm sm:text-base"
           >
             Verify
           </Link>
           <Link
             href="#"
-            className="w-full text-left hover:bg-[#FFD700] hover:text-black rounded-lg px-4 py-2 transition-colors duration-300"
+            className="w-full text-left hover:bg-[#FFD700] hover:text-black rounded-lg px-4 py-2 transition-colors duration-300 text-sm sm:text-base"
           >
             Contact Us
           </Link>
           <button
-            className="w-full max-w-md border border-[#FFD700] rounded-full py-3 px-8 bg-transparent hover:bg-[#FFD700] hover:text-black hover:shadow-lg transition-all duration-500 ease-in-out"
+            className="
+              w-full max-w-xs sm:max-w-sm border border-[#FFD700] rounded-full 
+              py-2.5 sm:py-3 px-6 sm:px-8 
+              bg-transparent hover:bg-[#FFD700] hover:text-black hover:shadow-lg 
+              transition-all duration-500 ease-in-out text-sm sm:text-base
+            "
           >
             Enroll Now
           </button>

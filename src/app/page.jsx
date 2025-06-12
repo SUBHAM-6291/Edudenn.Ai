@@ -24,7 +24,6 @@ const Page = () => {
           flex
           flex-col
           items-center
-          sm:items-start
           py-4
           sm:py-8
           px-4
@@ -32,18 +31,21 @@ const Page = () => {
           md:px-8
           lg:px-10
           xl:px-12
-          2xl:px-14
+          2xl:px-12  /* Reduced padding for consistency */
           watch:px-2
+          w-full
+          mx-auto  /* Ensure centering */
         "
       >
         <div
           className="
             w-full
             max-w-[1280px]
+            mx-auto  /* Explicitly center content */
             space-y-8
             sm:space-y-12
             watch:space-y-4
-            sm:text-left
+            text-center sm:text-left
           "
         >
           <Navbar />
