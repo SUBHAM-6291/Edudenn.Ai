@@ -5,6 +5,7 @@ import Image from 'next/image';
 
 const Placements = () => {
   const rowRefs = useRef([]);
+  const animationsRef = useRef([]);
 
   const imageRows = [
     [
@@ -38,7 +39,7 @@ const Placements = () => {
   ];
 
   useEffect(() => {
-    const animations = rowRefs.current.map((ref, idx) => {
+    animationsRef.current = rowRefs.current.map((ref, idx) => {
       if (!ref) return null;
 
       const imageElements = ref.querySelectorAll('img');
@@ -80,14 +81,23 @@ const Placements = () => {
           },
         });
 
+        // Add hover event listeners
+        const handleMouseEnter = () => animation.pause();
+        const handleMouseLeave = () => animation.play();
+
+        ref.addEventListener('mouseenter', handleMouseEnter);
+        ref.addEventListener('mouseleave', handleMouseLeave);
+
         return () => {
+          ref.removeEventListener('mouseenter', handleMouseEnter);
+          ref.removeEventListener('mouseleave', handleMouseLeave);
           animation.kill();
         };
       });
     });
 
     return () => {
-      animations.forEach((cleanup) => {
+      animationsRef.current.forEach((cleanup) => {
         if (typeof cleanup === 'function') cleanup();
       });
     };
@@ -122,7 +132,7 @@ const Placements = () => {
             {/* Wider Right Shadow */}
             <div className="absolute top-0 right-0 h-full w-16 sm:w-24 lg:w-[20rem] 2xl:w-[18rem] watch:w-12 bg-gradient-to-l from-black to-transparent z-20 pointer-events-none" />
 
-            <div className="relative space-y-3 sm:space-y-4 watch:space-y-2 h-full flex flex-col justify-between">
+            <div className="relative space-y-3 sm:space-y-6 watch:space-y-2 h-full flex flex-col justify-between">
               {imageRows.map((row, rowIdx) => (
                 <div key={rowIdx} className="overflow-hidden w-full" style={{ height: '60px' }}>
                   <div
