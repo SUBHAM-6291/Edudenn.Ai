@@ -246,35 +246,39 @@ const Allcourse = () => {
         </div>
 
         {/* Custom CSS for Flip and Filter */}
-        <style jsx>{`
-          .card-container {
-            transform-style: preserve-3d;
-          }
-          .backface-hidden {
-            backface-visibility: hidden;
-          }
-          .rotate-y-180 {
-            transform: rotateY(180deg);
-          }
-          .group:hover .card-container {
-            transform: rotateY(180deg);
-          }
-          .group .card-container::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: #ffffff;
-            transition: background 0s 0.7s;
-            z-index: -1;
-          }
-          .group:hover .card-container::before {
-            background: #fbbf24;
-            transition: background 0s 0.7s;
-          }
-        `}</style>
+       <style jsx>{`
+  .card-container {
+    transform-style: preserve-3d;
+  }
+  .backface-hidden {
+    backface-visibility: hidden;
+  }
+  .rotate-y-180 {
+    transform: rotateY(180deg);
+  }
+  .group:hover .card-container {
+    transform: rotateY(180deg);
+  }
+  .group .card-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #ffffff;
+    transition: background 0s 0.7s;
+    z-index: -1;
+  }
+  .group:hover .card-container::before {
+    background: #fbbf24;
+    transition: background 0s 0.7s;
+  }
+  /* Add this to ensure black text on hover */
+  button:hover {
+    color: #000000 !important;
+  }
+`}</style>
       </div>
     </div>
   );

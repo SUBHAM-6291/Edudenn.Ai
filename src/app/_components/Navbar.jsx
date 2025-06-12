@@ -27,8 +27,9 @@ const Navbar = () => {
     <nav
       className={`top-0 left-0 w-full z-50 font-gucina transition-colors duration-500 bg-black text-white`}
     >
-      <div className="max-w-7xl mx-auto flex items-center justify-between py-4 px-4 sm:px-5 md:px-8 lg:px-10 xl:px-12">
-        <div className="flex-shrink-0 w-32 sm:w-36 md:w-40 lg:w-48 xl:w-52">
+      <div className="max-w-7xl mx-auto flex items-center justify-between py-4 px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12">
+        {/* Adjusted logo size for sm and md devices */}
+        <div className="flex-shrink-0 w-36 sm:w-44 md:w-48 lg:w-48 xl:w-52">
           <img
             src="/eduden.png"
             alt="EduDen Logo"
@@ -36,13 +37,14 @@ const Navbar = () => {
           />
         </div>
 
+        {/* Increased hamburger icon size for sm and md */}
         <button
           className="lg:hidden focus:outline-none text-white transition-colors duration-500"
           onClick={toggleMenu}
           aria-label="Toggle navigation menu"
         >
           <svg
-            className="w-8 h-8 text-[#FFD700]"
+            className="w-9 h-9 sm:w-10 sm:h-10 md:w-11 md:h-11 text-[#FFD700]" // Larger icon for sm and md
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
@@ -182,136 +184,135 @@ const Navbar = () => {
         </div>
       </div>
 
-    {isMenuOpen && (
-    
-  <div className="lg:hidden flex flex-col items-start w-full bg-black text-white space-y-4 py-6 px-4 transition-all duration-500">
-    <Link
-      href="#"
-      className="w-full text-left hover:bg-[#FFD700] hover:text-black rounded-lg px-4 py-2 transition-colors duration-300"
-    >
-      Home
-    </Link>
-    <Link
-      href="#"
-      className="w-full text-left hover:bg-[#FFD700] hover:text-black rounded-lg px-4 py-2 transition-colors duration-300"
-    >
-      About Us
-    </Link>
-    <div className="w-full">
-      <button
-        className="w-full text-left hover:bg-[#FFD700] hover:text-black rounded-lg px-4 py-2 transition-colors duration-300 flex items-center justify-between"
-        onClick={toggleCourses}
-      >
-        Courses
-        <span className="ml-2">
-          <svg
-            className={`w-5 h-5 transition-transform duration-300 ${isCoursesOpen ? 'rotate-180' : ''}`}
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            viewBox="0 0 24 24"
-          >
-            <path strokeLinecap="round" strokeLinejoin="round" d="m19 9-7 7-7-7" />
-          </svg>
-        </span>
-      </button>
-      <div
-        className={`overflow-hidden transition-all duration-300 ease-in-out ${
-          isCoursesOpen ? 'max-h-[400px] opacity-100' : 'max-h-0 opacity-0'
-        }`}
-      >
-        <div className="w-full bg-black text-white rounded-lg shadow-lg mt-2">
+      {isMenuOpen && (
+        <div className="lg:hidden flex flex-col items-start w-full bg-black text-white space-y-4 py-6 px-4 sm:px-6 md:px-8 transition-all duration-500">
           <Link
             href="#"
-            className="block text-left px-8 py-2 hover:bg-[#FFD700] hover:text-black rounded-lg transition-colors duration-300"
+            className="w-full text-left hover:bg-[#FFD700] hover:text-black rounded-lg px-4 py-2 transition-colors duration-300"
           >
-            Web Development
+            Home
           </Link>
           <Link
             href="#"
-            className="block text-left px-8 py-2 hover:bg-[#FFD700] hover:text-black rounded-lg transition-colors duration-300"
+            className="w-full text-left hover:bg-[#FFD700] hover:text-black rounded-lg px-4 py-2 transition-colors duration-300"
           >
-            Data Science
+            About Us
+          </Link>
+          <div className="w-full">
+            <button
+              className="w-full text-left hover:bg-[#FFD700] hover:text-black rounded-lg px-4 py-2 transition-colors duration-300 flex items-center justify-between"
+              onClick={toggleCourses}
+            >
+              Courses
+              <span className="ml-2">
+                <svg
+                  className={`w-5 h-5 transition-transform duration-300 ${isCoursesOpen ? 'rotate-180' : ''}`}
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  viewBox="0 0 24 24"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" d="m19 9-7 7-7-7" />
+                </svg>
+              </span>
+            </button>
+            <div
+              className={`overflow-hidden transition-all duration-300 ease-in-out ${
+                isCoursesOpen ? 'max-h-[400px] opacity-100' : 'max-h-0 opacity-0'
+              }`}
+            >
+              <div className="w-full bg-black text-white rounded-lg shadow-lg mt-2">
+                <Link
+                  href="#"
+                  className="block text-left px-8 py-2 hover:bg-[#FFD700] hover:text-black rounded-lg transition-colors duration-300"
+                >
+                  Web Development
+                </Link>
+                <Link
+                  href="#"
+                  className="block text-left px-8 py-2 hover:bg-[#FFD700] hover:text-black rounded-lg transition-colors duration-300"
+                >
+                  Data Science
+                </Link>
+                <Link
+                  href="#"
+                  className="block text-left px-8 py-2 hover:bg-[#FFD700] hover:text-black rounded-lg transition-colors duration-300"
+                >
+                  Graphic Design
+                </Link>
+                <Link
+                  href="#"
+                  className="block text-left px-8 py-2 hover:bg-[#FFD700] hover:text-black rounded-lg transition-colors duration-300"
+                >
+                  Digital Marketing
+                </Link>
+              </div>
+            </div>
+          </div>
+          <div className="w-full">
+            <button
+              className="w-full text-left hover:bg-[#FFD700] hover:text-black rounded-lg px-4 py-2 transition-colors duration-300 flex items-center justify-between"
+              onClick={toggleWhatsNew}
+            >
+              What's New
+              <span className="ml-2">
+                <svg
+                  className={`w-5 h-5 transition-transform duration-300 ${isWhatsNewOpen ? 'rotate-180' : ''}`}
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  viewBox="0 0 24 24"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" d="m19 9-7 7-7-7" />
+                </svg>
+              </span>
+            </button>
+            <div
+              className={`overflow-hidden transition-all duration-300 ease-in-out ${
+                isWhatsNewOpen ? 'max-h-[400px] opacity-100' : 'max-h-0 opacity-0'
+              }`}
+            >
+              <div className="w-full bg-black text-white rounded-lg shadow-lg mt-2">
+                <Link
+                  href="#"
+                  className="block text-left px-8 py-2 hover:bg-[#FFD700] hover:text-black rounded-lg transition-colors duration-300"
+                >
+                  New Courses
+                </Link>
+                <Link
+                  href="#"
+                  className="block text-left px-8 py-2 hover:bg-[#FFD700] hover:text-black rounded-lg transition-colors duration-300"
+                >
+                  Webinars
+                </Link>
+                <Link
+                  href="#"
+                  className="block text-left px-8 py-2 hover:bg-[#FFD700] hover:text-black rounded-lg transition-colors duration-300"
+                >
+                  Blog Posts
+                </Link>
+              </div>
+            </div>
+          </div>
+          <Link
+            href="#"
+            className="w-full text-left hover:bg-[#FFD700] hover:text-black rounded-lg px-4 py-2 transition-colors duration-300"
+          >
+            Verify
           </Link>
           <Link
             href="#"
-            className="block text-left px-8 py-2 hover:bg-[#FFD700] hover:text-black rounded-lg transition-colors duration-300"
+            className="w-full text-left hover:bg-[#FFD700] hover:text-black rounded-lg px-4 py-2 transition-colors duration-300"
           >
-            Graphic Design
+            Contact Us
           </Link>
-          <Link
-            href="#"
-            className="block text-left px-8 py-2 hover:bg-[#FFD700] hover:text-black rounded-lg transition-colors duration-300"
+          <button
+            className="w-full max-w-md border border-[#FFD700] rounded-full py-3 px-8 bg-transparent hover:bg-[#FFD700] hover:text-black hover:shadow-lg transition-all duration-500 ease-in-out"
           >
-            Digital Marketing
-          </Link>
+            Enroll Now
+          </button>
         </div>
-      </div>
-    </div>
-    <div className="w-full">
-      <button
-        className="w-full text-left hover:bg-[#FFD700] hover:text-black rounded-lg px-4 py-2 transition-colors duration-300 flex items-center justify-between"
-        onClick={toggleWhatsNew}
-      >
-        What's New
-        <span className="ml-2">
-          <svg
-            className={`w-5 h-5 transition-transform duration-300 ${isWhatsNewOpen ? 'rotate-180' : ''}`}
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            viewBox="0 0 24 24"
-          >
-            <path strokeLinecap="round" strokeLinejoin="round" d="m19 9-7 7-7-7" />
-          </svg>
-        </span>
-      </button>
-      <div
-        className={`overflow-hidden transition-all duration-300 ease-in-out ${
-          isWhatsNewOpen ? 'max-h-[400px] opacity-100' : 'max-h-0 opacity-0'
-        }`}
-      >
-        <div className="w-full bg-black text-white rounded-lg shadow-lg mt-2">
-          <Link
-            href="#"
-            className="block text-left px-8 py-2 hover:bg-[#FFD700] hover:text-black rounded-lg transition-colors duration-300"
-          >
-            New Courses
-          </Link>
-          <Link
-            href="#"
-            className="block text-left px-8 py-2 hover:bg-[#FFD700] hover:text-black rounded-lg transition-colors duration-300"
-          >
-            Webinars
-          </Link>
-          <Link
-            href="#"
-            className="block text-left px-8 py-2 hover:bg-[#FFD700] hover:text-black rounded-lg transition-colors duration-300"
-          >
-            Blog Posts
-          </Link>
-        </div>
-      </div>
-    </div>
-    <Link
-      href="#"
-      className="w-full text-left hover:bg-[#FFD700] hover:text-black rounded-lg px-4 py-2 transition-colors duration-300"
-    >
-      Verify
-    </Link>
-    <Link
-      href="#"
-      className="w-full text-left hover:bg-[#FFD700] hover:text-black rounded-lg px-4 py-2 transition-colors duration-300"
-    >
-      Contact Us
-    </Link>
-    <button
-      className="w-full max-w-md border border-[#FFD700] rounded-full py-3 px-8 bg-transparent hover:bg-[#FFD700] hover:text-black hover:shadow-lg transition-all duration-500 ease-in-out"
-    >
-      Enroll Now
-    </button>
-  </div>
-)}
+      )}
     </nav>
   );
 };

@@ -17,9 +17,10 @@ import Placements from './_components/Placements';
 const Page = () => {
   return (
     <div className="bg-black">
-      <Navbar />
+      
       <div className="flex flex-col items-center py-4 sm:py-8 px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 2xl:px-14 watch:px-2">
         <div className="w-full max-w-[1280px] space-y-8 sm:space-y-12 watch:space-y-4">
+          <Navbar />
           <Aboutus />
           <Aboutus_Text />
           <Course_categorys />
@@ -34,6 +35,8 @@ const Page = () => {
           <FAQ />
         </div>
       </div>
+      
+
           <Clan />
      <Testimonial />
     

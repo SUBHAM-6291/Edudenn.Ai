@@ -5,7 +5,7 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
-// Sample testimonial data from the first component
+// Sample testimonial data
 const testimonials = [
   {
     id: 1,
@@ -31,7 +31,7 @@ const testimonials = [
 ];
 
 const Testimonial = () => {
-  // Slider settings from the first component
+  // Slider settings
   const settings = {
     dots: true,
     infinite: true,
@@ -92,15 +92,15 @@ const Testimonial = () => {
         <div className="absolute inset-0 bg-black/30" />
 
         <div className="relative z-10 flex flex-col lg:flex-row-reverse items-center justify-between w-full max-w-6xl gap-8 sm:gap-12 md:gap-16 lg:gap-20">
-          {/* TEXT CONTENT from the second component */}
-          <div className="flex flex-col items-start w-full lg:w-1/2 space-y-4 sm:space-y-6 text-center lg:text-left">
+          {/* TEXT CONTENT */}
+          <div className="flex flex-col items-start w-full lg:w-1/2 space-y-4 sm:space-y-6 text-left">
             <h2 className="text-yellow-400 text-2xl sm:text-3xl md:text-4xl font-extrabold font-gucina">
               Testimonial
             </h2>
             <h3 className="text-white text-xl sm:text-2xl md:text-3xl font-bold font-gucina">
               What Students Say
             </h3>
-            <p className="text-white text-sm sm:text-base md:text-lg font-light lexend-body relative hover:underline-yellow">
+            <p className="text-white text-sm sm:text-base md:text-lg font-light lexend-body hover:underline-yellow">
               Ex urna finibus natoque auctor pretium etiam consequat eleifend himenaeos mauris
               placerat ridiculus odio praesent. Ex urna finibus natoque auctor pretium etiam
               consequat eleifend himenaeos mauris placerat ridiculus odio praesent.
@@ -116,7 +116,7 @@ const Testimonial = () => {
             </button>
           </div>
 
-          {/* TESTIMONIAL SLIDER with card design from the second component */}
+          {/* TESTIMONIAL SLIDER */}
           <div className="flex flex-col items-start w-full lg:w-1/2 space-y-4 sm:space-y-6">
             <Slider {...settings} className="w-full">
               {testimonials.map((testimonial) => (
@@ -140,7 +140,7 @@ const Testimonial = () => {
                           </svg>
                         ))}
                       </div>
-                      <p className="text-white text-xs sm:text-sm font-light lexend-body mt-6 sm:mt-8 leading-relaxed text-left relative hover:underline-yellow">
+                      <p className="text-white text-xs sm:text-sm font-light lexend-body mt-6 sm:mt-8 leading-relaxed text-left hover:underline-yellow">
                         {testimonial.quote}
                       </p>
                       <div className="flex items-center space-x-3 mt-4">

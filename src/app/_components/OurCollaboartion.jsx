@@ -20,7 +20,7 @@ const OurCollaboration = () => {
 
     const animation = gsap.to(logosContainer, {
       x: -totalWidth,
-      duration: 250,
+      duration: 300,
       ease: 'none',
       repeat: -1,
       modifiers: {
@@ -68,7 +68,7 @@ const OurCollaboration = () => {
       </div>
 
       {/* Title */}
-      <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[4.375rem] font-bold text-white relative mb-4 sm:mb-6 md:mb-8 flex flex-wrap justify-center text-center px-4">
+      <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[4.375rem] font-bold text-white relative mb-4 sm:mb-6 md:mb-8 flex flex-wrap sm:justify-start justify-center text-center sm:text-left px-4">
         <span className="josefin-sans-title mr-2">Our</span>
         <span className="font-gucina relative group inline-block" style={{ fontWeight: 700 }}>
           Collaboration
@@ -77,7 +77,7 @@ const OurCollaboration = () => {
       </h1>
 
       {/* Description */}
-      <p className="text-center text-gray-300 max-w-md sm:max-w-lg md:max-w-2xl lg:max-w-3xl mx-auto mb-6 sm:mb-8 md:mb-10 lexend-body text-sm sm:text-base md:text-lg px-4" style={{ fontWeight: 500, lineHeight: '150%' }}>
+      <p className="text-center sm:text-left text-gray-300 max-w-md sm:max-w-lg md:max-w-2xl lg:max-w-3xl mx-auto sm:mx-0 mb-6 sm:mb-8 md:mb-10 lexend-body text-sm sm:text-base md:text-lg px-4" style={{ fontWeight: 500, lineHeight: '150%' }}>
         Well, because we’re not your grandma’s boring old school! At Edu-Den, we’re the rebels of education, the mavericks of learning, and the champions of fun-filled knowledge. Let’s make learning epic together!
       </p>
 

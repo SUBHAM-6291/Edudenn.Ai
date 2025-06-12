@@ -36,14 +36,14 @@ const FAQ = () => {
   return (
     <div className="bg-black text-white py-12 lg:py-16 xl:py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 flex flex-col lg:flex-row gap-10">
-        {/* Left Side: FAQ Sections */}
+      
         <div className="lg:w-[35rem] flex flex-col justify-start">
-          <div className="mb-6">
-            <h1 className="font-gucina text-5xl font-bold relative group">
+          <div className="mb-6 text-center">
+            <h1 className="font-gucina text-4xl font-bold relative group">
               Frequently
-              <span className="absolute left-0 bottom-[-2px] w-0 h-1 bg-yellow-300 transition-all duration-300 ease-in-out group-hover:w-full"></span>
+              <span className="absolute left-1/2 bottom-[-2px] w-0 h-1 bg-yellow-300 transition-all duration-300 ease-in-out group-hover:w-full transform -translate-x-1/2"></span>
             </h1>
-            <h2 className="font-gucina text-4xl font-semibold mt-1">
+            <h2 className="font-gucina text-3xl font-semibold mt-1">
               Asked Questions
             </h2>
           </div>
@@ -59,11 +59,11 @@ const FAQ = () => {
                 role="button"
                 aria-expanded={openSection === index}
               >
-                <h3 className="text-white text-lg sm:text-xl font-semibold">
+                <h3 className="text-white text-base sm:text-lg font-semibold">
                   {faq.title}
                 </h3>
                 <IoIosArrowDown
-                  className={`text-white text-xl transition-transform duration-300 ${
+                  className={`text-white text-lg transition-transform duration-300 ${
                     openSection === index ? 'rotate-180' : 'rotate-0'
                   }`}
                 />
@@ -73,7 +73,7 @@ const FAQ = () => {
                   openSection === index ? 'max-h-[500px] mt-2' : 'max-h-0'
                 }`}
               >
-                <p className="text-gray-300 text-base sm:text-lg leading-relaxed">
+                <p className="text-gray-300 text-sm sm:text-base leading-relaxed">
                   {faq.content}
                 </p>
               </div>
@@ -86,16 +86,16 @@ const FAQ = () => {
           <img
             src="chatsvg.png"
             alt="Chat Icon"
-            className="w-20 h-20 mb-5"
+            className="w-16 h-16 mb-5"
           />
-          <h2 className="font-gucina text-3xl font-bold text-center mb-4">
+          <h2 className="font-gucina text-2xl font-bold text-center mb-4">
             Do you have any questions?
           </h2>
-          <p className="text-base sm:text-lg text-gray-300 text-center mb-6 leading-relaxed">
+          <p className="text-sm sm:text-base text-gray-300 text-center mb-6 leading-relaxed">
             Our team is here to guide you through your learning journey.
             Contact us for personalized support or course recommendations!
           </p>
-          <button className="w-36 h-12 border border-yellow-400 rounded-full bg-transparent text-yellow-400 text-base font-semibold hover:bg-yellow-400 hover:text-black transition-all duration-500">
+          <button className="w-32 h-10 border border-yellow-400 rounded-full bg-transparent text-yellow-400 text-sm font-semibold hover:bg-yellow-400 hover:text-black transition-all duration-500">
             Contact Us
           </button>
         </div>
